@@ -1,0 +1,17 @@
+
+/* Hide scrollbar for horizontal carousels */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+
+@media (min-width: 1024px) {
+  .snap-section {
+    min-height: 100vh;
+  }
+}
