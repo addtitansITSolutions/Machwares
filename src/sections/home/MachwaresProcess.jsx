@@ -1,56 +1,60 @@
+
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowUpRight,
   CheckCircle2,
-  ClipboardCheck,
-  Code2,
+  ClipboardList,
   Compass,
-  Headset,
-  ShieldCheck,
+  Target,
+  Megaphone,
+  ChartNoAxesCombined,
+  Users,
+  Lightbulb,
+  MousePointerClick,
+  TrendingUp,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const processSteps = [
   {
     step: "01",
-    phase: "Discovery & Audit",
-    title: "Technical Assessment & Architecture",
+    phase: "Discover & Understand",
+    title: "Getting to Know Your Brand",
     description:
-      "We audit your existing infrastructure, bottlenecks, and business requirements to identify security gaps, technical debt, and high-impact opportunities.",
-    deliverable: "System Audit & Scope Blueprint",
-    duration: "Week 1–2",
-    icon: ClipboardCheck,
-  },
-  {
-    step: "02",
-    phase: "Roadmap & Design",
-    title: "Solution Blueprint & Sprint Planning",
-    description:
-      "We define a clear technical roadmap, cloud topology, and milestone schedule—giving you transparent timelines and predictable costs before writing code.",
-    deliverable: "Architecture Spec & Milestone Plan",
-    duration: "Week 2–3",
+      "We start by understanding your business, audience, market position and growth objectives. This helps us identify the right opportunities, challenges and channels for your brand.",
+    deliverable: "Brand & Audience Insights",
+    timeframe: "The Starting Point",
     icon: Compass,
   },
   {
-    step: "03",
-    phase: "Agile Execution",
-    title: "Iterative Engineering & QA Testing",
+    step: "02",
+    phase: "Strategize & Plan",
+    title: "Building the Right Marketing Strategy",
     description:
-      "Our engineers ship production-ready code in weekly sprints with automated testing, security checks, and staging previews you can test in real time.",
-    deliverable: "Weekly Builds & Staging Demos",
-    duration: "Iterative Sprints",
-    icon: Code2,
+      "With clear goals in place, we develop a focused marketing approach. From audience targeting and channel selection to campaign planning, every activity is aligned with your business objectives.",
+    deliverable: "Campaign Strategy & Action Plan",
+    timeframe: "The Roadmap",
+    icon: ClipboardList,
+  },
+  {
+    step: "03",
+    phase: "Execute & Activate",
+    title: "Bringing Campaigns to Life",
+    description:
+      "We put the strategy into action through performance campaigns, affiliate partnerships, digital marketing and influencer collaborations—connecting your brand with the audiences that matter.",
+    deliverable: "Campaign Execution & Activation",
+    timeframe: "Going Live",
+    icon: Megaphone,
   },
   {
     step: "04",
-    phase: "Deployment & SLA",
-    title: "Zero-Downtime Launch & 24/7 Support",
+    phase: "Measure & Optimize",
+    title: "Learning, Improving & Growing",
     description:
-      "We handle cloud deployment, monitoring setup, and documentation—followed by proactive SLA-backed maintenance so your systems stay fast and secure.",
-    deliverable: "Production Release & SLA Care",
-    duration: "Ongoing",
-    icon: Headset,
+      "We monitor campaign activity, evaluate performance and identify opportunities to improve. By learning from the data, we help refine marketing efforts and support sustainable brand growth.",
+    deliverable: "Performance Insights & Optimization",
+    timeframe: "Ongoing Growth",
+    icon: ChartNoAxesCombined,
   },
 ];
 
@@ -59,8 +63,13 @@ const ease = [0.22, 1, 0.36, 1];
 const MachwaresProcess = () => {
   const [activeStep, setActiveStep] = useState(0);
 
+  const active = processSteps[activeStep];
+
   return (
-    <section className="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-32">
+    <section
+      id="our-process"
+      className="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-32"
+    >
       {/* Subtle Top Border */}
       <div
         aria-hidden="true"
@@ -68,9 +77,8 @@ const MachwaresProcess = () => {
       />
 
       <div className="mx-auto max-w-[1440px] px-6 sm:px-8 lg:px-12 xl:px-16">
-        {/* =====================================================
-            SECTION HEADER
-        ===================================================== */}
+
+        {/* SECTION HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,28 +90,29 @@ const MachwaresProcess = () => {
             <div className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-[var(--primary)]/20 bg-[var(--light)] px-3.5 py-1.5">
               <span className="h-2 w-2 rounded-full bg-[var(--primary)]" />
               <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.18em] text-[var(--primary)]">
-                How We Deliver
+                How We Work
               </span>
             </div>
 
             <h2 className="font-[var(--font-display)] text-3xl font-bold leading-[1.08] tracking-[-0.035em] text-[var(--dark)] sm:text-4xl lg:text-5xl">
-              Clear engineering ownership from{" "}
-              <span className="text-[var(--primary)]">audit to deployment.</span>
+              A thoughtful approach to
+              <span className="text-[var(--primary)]">
+                {" "}meaningful brand growth.
+              </span>
             </h2>
           </div>
 
           <p className="max-w-md font-[var(--font-body)] text-sm leading-relaxed text-[var(--text)] sm:text-base lg:pb-1">
-            No black-box timelines or surprise handoffs. Every Machwares
-            engagement follows a structured four-stage delivery framework built
-            for transparency and reliability.
+            Great marketing starts with understanding. Our four-step approach
+            brings strategy, execution and continuous improvement together
+            to help your brand reach the right audience.
           </p>
         </motion.div>
 
-        {/* =====================================================
-            MAIN SPLIT LAYOUT
-        ===================================================== */}
+        {/* MAIN SPLIT LAYOUT */}
         <div className="mt-14 grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* LEFT COLUMN: Visual & Standard Card (5 Cols) */}
+
+          {/* LEFT COLUMN: CAMPAIGN VISUAL */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -112,43 +121,127 @@ const MachwaresProcess = () => {
             className="lg:sticky lg:top-28 lg:col-span-5"
           >
             <div className="overflow-hidden rounded-3xl border border-[var(--border)] bg-[#F8F9FA] p-3">
-              {/* Photo Frame */}
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#1A1D1F]">
-                <img
-                  src="/HeroBg/Howweproceed.jpg"
-                  alt="Machwares software engineering team reviewing system architecture"
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1D1F]/80 via-[#1A1D1F]/15 to-transparent" />
 
-                {/* Floating Active Stage Pill */}
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-xl border border-white/15 bg-[#1A1D1F]/90 px-4 py-3 text-white backdrop-blur-md">
-                  <div>
-                    <span className="block font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--primary)]">
-                      Active Phase • {processSteps[activeStep].step}
+              {/* Marketing Visual Panel */}
+              <div className="relative flex aspect-[4/3] flex-col justify-between overflow-hidden rounded-2xl bg-[var(--dark)] p-6 sm:p-8">
+
+                {/* Background Decoration */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full border border-white/[0.07]"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-10 -top-10 h-44 w-44 rounded-full border border-white/[0.08]"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute bottom-0 left-0 h-40 w-40 rounded-full bg-[var(--primary)]/15 blur-3xl"
+                />
+
+                {/* Campaign Journey */}
+                <div className="relative z-10 my-0">
+                  <div className="mb-4 flex items-center justify-between">
+                    <span className="font-[var(--font-body)] text-xs font-semibold text-white/65">
+                      Our growth journey
                     </span>
-                    <span className="font-[var(--font-display)] text-sm font-bold text-white">
-                      {processSteps[activeStep].phase}
+                    <span className="font-mono text-[10px] font-semibold text-[var(--primary)]">
+                      0{activeStep + 1} / 04
                     </span>
                   </div>
 
-                  <span className="rounded-lg bg-white/10 px-2.5 py-1 font-mono text-xs font-semibold text-white/90">
-                    {processSteps[activeStep].duration}
+                  <div className="space-y-2.5">
+                    {processSteps.map((item, index) => {
+                      const Icon = item.icon;
+                      const isActive = activeStep === index;
+                      const isComplete = index < activeStep;
+
+                      return (
+                        <motion.div
+                          key={item.step}
+                          animate={{
+                            opacity: isActive ? 1 : 0.55,
+                            x: isActive ? 5 : 0,
+                          }}
+                          transition={{ duration: 0.3 }}
+                          className={`flex items-center gap-3 rounded-xl border px-3.5 py-3 transition-colors duration-300 ${
+                            isActive
+                              ? "border-[var(--primary)]/60 bg-[var(--primary)]/15"
+                              : "border-white/10 bg-white/[0.04]"
+                          }`}
+                        >
+                          <div
+                            className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${
+                              isActive
+                                ? "bg-[var(--primary)] text-white"
+                                : "bg-white/10 text-white/65"
+                            }`}
+                          >
+                            <Icon size={17} />
+                          </div>
+
+                          <div className="min-w-0 flex-1">
+                            <p className="font-mono text-[9px] font-semibold tracking-wider text-white/45">
+                              STEP {item.step}
+                            </p>
+                            <p className="truncate font-[var(--font-display)] text-xs font-bold text-white sm:text-sm">
+                              {item.phase}
+                            </p>
+                          </div>
+
+                          {isActive ? (
+                            <span className="h-2 w-2 shrink-0 rounded-full bg-[var(--primary)] shadow-[0_0_12px_rgba(212,32,39,0.8)]" />
+                          ) : isComplete ? (
+                            <CheckCircle2
+                              size={16}
+                              className="shrink-0 text-emerald-400"
+                            />
+                          ) : null}
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Active Stage */}
+                <div className="relative z-10 flex items-center justify-between border-t border-white/10 pt-4">
+                  <div>
+                    <span className="block font-[var(--font-body)] text-[9px] font-bold uppercase tracking-[0.16em] text-[var(--primary)]">
+                      Current Focus
+                    </span>
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={active.step}
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -5 }}
+                        transition={{ duration: 0.2 }}
+                        className="mt-1 block font-[var(--font-display)] text-sm font-bold text-white"
+                      >
+                        {active.phase}
+                      </motion.span>
+                    </AnimatePresence>
+                  </div>
+
+                  <span className="rounded-lg bg-white/10 px-3 py-1.5 font-mono text-[10px] font-semibold text-white/80">
+                    {active.timeframe}
                   </span>
                 </div>
               </div>
 
-              {/* Engineering Standards Strip */}
+              {/* MACHWARES APPROACH STRIP */}
               <div className="mt-3 rounded-2xl bg-white p-5">
                 <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5">
                   <div className="flex items-center gap-2">
-                    <ShieldCheck size={17} className="text-[var(--primary)]" />
+                    <TrendingUp
+                      size={17}
+                      className="text-[var(--primary)]"
+                    />
                     <span className="font-[var(--font-display)] text-sm font-bold text-[var(--dark)]">
-                      The Machwares Standard
+                      The Machwares Approach
                     </span>
                   </div>
+
                   <span className="font-mono text-[11px] font-semibold text-[var(--text)]">
                     Digitally Yours!
                   </span>
@@ -156,42 +249,43 @@ const MachwaresProcess = () => {
 
                 <div className="mt-4 grid grid-cols-2 gap-3">
                   {[
-                    "100% IP & Code Ownership",
-                    "Weekly Staging Previews",
-                    "Dedicated Tech Lead",
-                    "SLA-Backed Maintenance",
-                  ].map((guarantee) => (
-                    <div key={guarantee} className="flex items-start gap-2">
+                    "Audience-First Thinking",
+                    "Strategy-Led Campaigns",
+                    "Meaningful Partnerships",
+                    "Continuous Improvement",
+                  ].map((value) => (
+                    <div key={value} className="flex items-start gap-2">
                       <CheckCircle2
                         size={15}
                         className="mt-0.5 shrink-0 text-[var(--primary)]"
                       />
                       <span className="font-[var(--font-body)] text-xs font-medium leading-snug text-[var(--dark)]/85">
-                        {guarantee}
+                        {value}
                       </span>
                     </div>
                   ))}
                 </div>
 
                 <div className="mt-5 border-t border-[var(--border)] pt-4">
-                  <Link
-                    to="/contact"
+                  <a
+                    href="mailto:info@machwares.com?subject=Marketing%20Inquiry"
                     className="group flex w-full items-center justify-between rounded-xl bg-[var(--dark)] px-5 py-3.5 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors duration-300 hover:bg-[var(--primary)]"
                   >
-                    <span>Start With a Technical Audit</span>
+                    <span>Discuss Your Growth Goals</span>
                     <ArrowUpRight
                       size={16}
                       className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                     />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* RIGHT COLUMN: Clean Accordion / Editorial List (7 Cols) */}
+          {/* RIGHT COLUMN: PROCESS ACCORDION */}
           <div className="lg:col-span-7">
             <div className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
+
               {processSteps.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = activeStep === index;
@@ -199,13 +293,18 @@ const MachwaresProcess = () => {
                 return (
                   <div
                     key={item.step}
-                    onMouseEnter={() => setActiveStep(index)}
-                    onClick={() => setActiveStep(index)}
-                    className="group cursor-pointer py-7 transition-colors sm:py-8"
+                    className="group py-7 transition-colors sm:py-8"
                   >
-                    {/* Header Row (Always visible, uncluttered) */}
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-4 sm:gap-6">
+                    {/* STEP HEADER */}
+                    <button
+                      type="button"
+                      aria-expanded={isActive}
+                      aria-controls={`process-panel-${item.step}`}
+                      onMouseEnter={() => setActiveStep(index)}
+                      onClick={() => setActiveStep(index)}
+                      className="flex w-full items-center justify-between gap-4 text-left"
+                    >
+                      <div className="flex min-w-0 items-center gap-4 sm:gap-6">
                         <span
                           className={`font-mono text-sm font-bold transition-colors ${
                             isActive
@@ -226,12 +325,13 @@ const MachwaresProcess = () => {
                           <Icon size={20} strokeWidth={1.8} />
                         </div>
 
-                        <div>
+                        <div className="min-w-0">
                           <span className="block font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.12em] text-[var(--text)]">
                             {item.phase}
                           </span>
+
                           <h3
-                            className={`mt-0.5 font-[var(--font-display)] text-xl font-bold tracking-[-0.02em] transition-colors sm:text-2xl ${
+                            className={`mt-0.5 font-[var(--font-display)] text-lg font-bold tracking-[-0.02em] transition-colors sm:text-2xl ${
                               isActive
                                 ? "text-[var(--dark)]"
                                 : "text-[var(--dark)]/75 group-hover:text-[var(--dark)]"
@@ -249,14 +349,15 @@ const MachwaresProcess = () => {
                             : "bg-[#F4F5F7] text-[var(--text)]"
                         }`}
                       >
-                        {item.duration}
+                        {item.timeframe}
                       </span>
-                    </div>
+                    </button>
 
-                    {/* Expandable Description (Only open for active step) */}
+                    {/* EXPANDABLE DESCRIPTION */}
                     <AnimatePresence initial={false}>
                       {isActive && (
                         <motion.div
+                          id={`process-panel-${item.step}`}
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
@@ -270,7 +371,9 @@ const MachwaresProcess = () => {
 
                             <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-[var(--dark)]">
                               <span className="h-1.5 w-1.5 rounded-full bg-[var(--primary)]" />
-                              <span>Deliverable: {item.deliverable}</span>
+                              <span>
+                                Focus: {item.deliverable}
+                              </span>
                             </div>
                           </div>
                         </motion.div>

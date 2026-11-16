@@ -229,3 +229,12 @@
     width: 100%;
   }
 }
+
+
+
+.snap-section {
+  width: 100%;
+  position: relative;
+  min-height: auto;
+  height: auto;
+}

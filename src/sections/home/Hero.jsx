@@ -76,7 +76,7 @@ const Hero = () => {
 
           {/* Background Image */}
           <motion.img
-            src="/HeroBg/herocenterimg.png"
+            src="/HeroBg/herocenterimg.jpg"
             alt="Machwares software engineering and IT infrastructure"
             decoding="async"
             onLoad={() => setImageLoaded(true)}
@@ -89,24 +89,25 @@ const Hero = () => {
           {/* Contrast Scrim */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/75" />
 
+          
           {/* ===== HERO CONTENT (Progressively Reveals & Enlarges) ===== */}
           <motion.div
             style={{ scale: contentScale, y: contentY }}
             className="relative z-10 mx-auto flex max-w-[960px] flex-col items-center px-6 text-center will-change-transform sm:px-10"
           >
             {/* Stage 0 (Visible on Load): Eyebrow */}
-            <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+            {/* <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 backdrop-blur-md">
               <span className="h-2 w-2 rounded-full bg-[var(--primary)]" />
               <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.18em] text-white/90">
-                Machwares • IT Services & Software Engineering
+                Machwares • Digital Marketing & Growth Agency
               </span>
-            </div>
+            </div> */}
 
             {/* Stage 0 (Visible on Load): Heading */}
             <h1 className="font-[var(--font-display)] text-3xl font-bold leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl lg:text-[4rem]">
-              Practical software &{" "}
-              <span className="text-[var(--primary)]">reliable IT</span>{" "}
-              built for growing businesses.
+              Connecting brands with the{" "}
+              <span className="text-[var(--primary)]">right audience.</span>{" "}
+              Driving growth that matters.
             </h1>
 
             {/* Stage 1 (6% -> 26% scroll): Subtext */}
@@ -118,9 +119,10 @@ const Hero = () => {
               }}
               className="mt-5 max-w-[620px] font-[var(--font-body)] text-sm leading-relaxed text-white/80 will-change-transform sm:text-lg"
             >
-              We design, build, and maintain custom web applications, cloud
-              infrastructure, and managed IT systems—helping your team operate
-              faster with less downtime.
+              We help brands grow through strategic digital marketing,
+              performance-driven campaigns, affiliate partnerships, and
+              influencer collaborations—connecting your business with
+              the right people across the digital landscape.
             </motion.p>
 
             {/* Stage 2 (24% -> 44% scroll): Buttons */}
@@ -137,7 +139,7 @@ const Hero = () => {
                 to="/contact"
                 className="group inline-flex items-center gap-2.5 rounded-lg bg-[var(--primary)] px-7 py-3.5 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:bg-[#b81b21]"
               >
-                <span>Talk to Our Team</span>
+                <span>Grow Your Brand</span>
                 <ArrowUpRight
                   size={16}
                   strokeWidth={2.2}
@@ -149,7 +151,7 @@ const Hero = () => {
                 to="/services"
                 className="group inline-flex items-center gap-2.5 rounded-lg border border-white/25 bg-white/10 px-7 py-3.5 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.12em] text-white backdrop-blur-md transition-colors duration-200 hover:border-white/45 hover:bg-white/20"
               >
-                <span>Our Services</span>
+                <span>Explore Our Services</span>
                 <ArrowRight
                   size={15}
                   strokeWidth={2}
@@ -168,9 +170,9 @@ const Hero = () => {
               className="mt-7 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 will-change-transform"
             >
               {[
-                "Custom Software",
-                "Cloud & Infrastructure",
-                "Managed IT Support",
+                "Performance Marketing",
+                "Affiliate Partnerships",
+                "Influencer Marketing",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Check
@@ -185,6 +187,7 @@ const Hero = () => {
               ))}
             </motion.div>
           </motion.div>
+
 
           {/* Subtle Scroll Cue (Fades out as user begins scrolling) */}
           <motion.div

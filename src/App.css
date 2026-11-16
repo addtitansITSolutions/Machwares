@@ -12,6 +12,9 @@
 
 @media (min-width: 1024px) {
   .snap-section {
-    min-height: 100vh;
-  }
+  width: 100%;
+  position: relative;
+  min-height: auto;
+  height: auto;
+}
 }

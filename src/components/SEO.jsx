@@ -1,8 +1,9 @@
+
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const SITE_URL = "https://gopurplenut.com";
-const SITE_NAME = "Go Purple Nut";
+const SITE_URL = "https://machwares.com";
+const SITE_NAME = "Machwares";
 
 const SEO = ({
   title,

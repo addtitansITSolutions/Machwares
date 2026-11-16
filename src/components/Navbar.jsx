@@ -12,7 +12,6 @@ const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
-  { name: "Case Studies", path: "/projects" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -88,6 +87,7 @@ const Navbar = ({ forceScrolled = false }) => {
       }`}
     >
       <div className="relative mx-auto flex h-[84px] w-full max-w-[1440px] items-center justify-between px-6 lg:px-10 xl:px-12">
+        
         {/* =========================================
             LOGO
         ========================================= */}
@@ -99,11 +99,10 @@ const Navbar = ({ forceScrolled = false }) => {
           <img
             src="/logo/Logo_Machwares.png"
             alt="Machwares - Digitally Yours!"
-            className={`h-auto w-[145px] object-contain transition-all duration-500 sm:w-[160px] ${
-              !scrolled && !mobileOpen ? "brightness-0 invert" : ""
-            }`}
+            className="h-auto w-[145px] object-contain sm:w-[160px]"
           />
         </NavLink>
+
 
         {/* =========================================
             DESKTOP NAVIGATION (Pill Container)

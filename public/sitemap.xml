@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset
@@ -6,26 +7,26 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://gopurplenut.com/</loc>
+    <loc>https://machwares.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Main Pages -->
   <url>
-    <loc>https://gopurplenut.com/about</loc>
+    <loc>https://machwares.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://gopurplenut.com/services</loc>
+    <loc>https://machwares.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://gopurplenut.com/contact</loc>
+    <loc>https://machwares.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -33,37 +34,25 @@
   <!-- Service Pages -->
 
   <url>
-    <loc>https://gopurplenut.com/services/digital-marketing</loc>
+    <loc>https://machwares.com/services/performance-marketing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://gopurplenut.com/services/affiliate-marketing</loc>
+    <loc>https://machwares.com/services/affiliate-marketing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://gopurplenut.com/services/e-commerce</loc>
+    <loc>https://machwares.com/services/digital-marketing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://gopurplenut.com/services/performance-marketing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gopurplenut.com/services/creative-design</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gopurplenut.com/services/influencer-marketing</loc>
+    <loc>https://machwares.com/services/influencer-marketing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -71,25 +60,25 @@
   <!-- Legal Pages -->
 
   <url>
-    <loc>https://gopurplenut.com/privacy-policy</loc>
+    <loc>https://machwares.com/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://gopurplenut.com/terms-and-conditions</loc>
+    <loc>https://machwares.com/terms-and-conditions</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://gopurplenut.com/copyright-and-dmca</loc>
+    <loc>https://machwares.com/copyright-and-dmca</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://gopurplenut.com/gdpr-compliance</loc>
+    <loc>https://machwares.com/gdpr-compliance</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>

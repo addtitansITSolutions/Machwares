@@ -1,31 +1,43 @@
+
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-const easeOutExpo = (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+const easeOutExpo = (t) =>
+  t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 
 export default function useFullPageScroll({
   selector = "[data-section]",
-  duration = 1.3,   // seconds, raise for a slower, silkier glide
-  minWidth = 1024,  // full-page behavior on desktop only
-  offset = 0,       // set to Navbar height if it's fixed
+  duration = 1.3,
+  minWidth = 1024,
+  offset = 0,
 } = {}) {
   useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const isDesktop = window.matchMedia(`(min-width: ${minWidth}px)`).matches;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
     if (reduceMotion) return;
 
-    // Lenis smooths everything (touch + trackpad on mobile too)
+    const isDesktop = window.matchMedia(
+      `(min-width: ${minWidth}px)`
+    ).matches;
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: easeOutExpo,
-      smoothWheel: !isDesktop, // on desktop we handle the wheel ourselves
+      smoothWheel: !isDesktop,
+      smoothTouch: false,
     });
 
     let rafId;
+    let locked = false;
+    let unlockTimer;
+
     const raf = (time) => {
       lenis.raf(time);
       rafId = requestAnimationFrame(raf);
     };
+
     rafId = requestAnimationFrame(raf);
 
     if (!isDesktop) {
@@ -35,73 +47,171 @@ export default function useFullPageScroll({
       };
     }
 
-    let locked = false;
-    const getSections = () => Array.from(document.querySelectorAll(selector));
-    const topOf = (el) => el.getBoundingClientRect().top + window.scrollY - offset;
+    const getSections = () =>
+      Array.from(document.querySelectorAll(selector));
 
-    const currentIndex = () => {
-      const list = getSections();
-      const atBottom =
-        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-      if (atBottom) return list.length - 1;
-      let idx = 0;
-      list.forEach((el, i) => {
-        if (topOf(el) <= window.scrollY + 5) idx = i;
+    const getTop = (element) =>
+      element.getBoundingClientRect().top + window.scrollY;
+
+    const getCurrentIndex = () => {
+      const sections = getSections();
+
+      if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2
+      ) {
+        return sections.length - 1;
+      }
+
+      let index = 0;
+
+      sections.forEach((section, i) => {
+        if (getTop(section) <= window.scrollY + offset + 5) {
+          index = i;
+        }
       });
-      return idx;
+
+      return index;
     };
 
-    const goTo = (i) => {
-      const list = getSections();
-      const target = list[Math.max(0, Math.min(i, list.length - 1))];
+    const goToSection = (index) => {
+      const sections = getSections();
+
+      const target = sections[
+        Math.max(0, Math.min(index, sections.length - 1))
+      ];
+
       if (!target) return;
+
       locked = true;
+
+      clearTimeout(unlockTimer);
+
       lenis.scrollTo(target, {
         offset: -offset,
         duration,
         easing: easeOutExpo,
         lock: true,
         onComplete: () => {
-          // small cooldown so trackpad inertia doesn't trigger the next jump
-          setTimeout(() => (locked = false), 150);
+          unlockTimer = setTimeout(() => {
+            locked = false;
+          }, 180);
         },
       });
     };
 
-    const onWheel = (e) => {
-      if (Math.abs(e.deltaY) < 8) return;
-      const list = getSections();
-      const i = currentIndex();
-      const el = list[i];
-      const dir = e.deltaY > 0 ? 1 : -1;
+    const onWheel = (event) => {
+      if (Math.abs(event.deltaY) < 8) return;
 
-      // allow normal scrolling inside sections taller than the screen
-      const top = topOf(el);
-      const bottom = top + el.offsetHeight;
-      const viewBottom = window.scrollY + window.innerHeight;
-      if (dir === 1 && viewBottom < bottom - 5 && i < list.length - 1) return;
-      if (dir === -1 && window.scrollY > top + 5) return;
+      const sections = getSections();
+      const index = getCurrentIndex();
+      const currentSection = sections[index];
 
-      e.preventDefault();
+      if (!currentSection) return;
+
+      const direction = event.deltaY > 0 ? 1 : -1;
+
+      const sectionTop = getTop(currentSection);
+      const sectionBottom =
+        sectionTop + currentSection.offsetHeight;
+
+      const viewportBottom =
+        window.scrollY + window.innerHeight;
+
+      // Allow normal scrolling inside tall sections.
+      if (
+        direction > 0 &&
+        viewportBottom < sectionBottom - 5 &&
+        index < sections.length - 1
+      ) {
+        return;
+      }
+
+      if (
+        direction < 0 &&
+        window.scrollY > sectionTop + offset + 5
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+
       if (locked) return;
-      goTo(i + dir);
+
+      goToSection(index + direction);
     };
 
-    const onKey = (e) => {
-      const map = { ArrowDown: 1, PageDown: 1, ArrowUp: -1, PageUp: -1 };
-      if (!(e.key in map)) return;
-      if (/input|textarea|select/i.test(e.target.tagName)) return;
-      e.preventDefault();
-      if (!locked) goTo(currentIndex() + map[e.key]);
+    const onKeyDown = (event) => {
+      const directions = {
+        ArrowDown: 1,
+        PageDown: 1,
+        ArrowUp: -1,
+        PageUp: -1,
+      };
+
+      const direction = directions[event.key];
+
+      if (!direction) return;
+
+      if (
+        event.target.closest(
+          "input, textarea, select, button, a, [contenteditable='true']"
+        )
+      ) {
+        return;
+      }
+
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+
+      const sections = getSections();
+      const index = getCurrentIndex();
+      const currentSection = sections[index];
+
+      if (!currentSection) return;
+
+      const sectionTop = getTop(currentSection);
+      const sectionBottom =
+        sectionTop + currentSection.offsetHeight;
+
+      const viewportBottom =
+        window.scrollY + window.innerHeight;
+
+      // Preserve normal keyboard scrolling inside tall sections.
+      if (
+        direction > 0 &&
+        viewportBottom < sectionBottom - 5 &&
+        index < sections.length - 1
+      ) {
+        return;
+      }
+
+      if (
+        direction < 0 &&
+        window.scrollY > sectionTop + offset + 5
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+
+      if (!locked) {
+        goToSection(index + direction);
+      }
     };
 
-    window.addEventListener("wheel", onWheel, { passive: false });
-    window.addEventListener("keydown", onKey);
+    window.addEventListener("wheel", onWheel, {
+      passive: false,
+    });
+
+    window.addEventListener("keydown", onKeyDown);
 
     return () => {
       window.removeEventListener("wheel", onWheel);
-      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("keydown", onKeyDown);
+
+      clearTimeout(unlockTimer);
       cancelAnimationFrame(rafId);
+
       lenis.destroy();
     };
   }, [selector, duration, minWidth, offset]);
