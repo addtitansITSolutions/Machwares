@@ -95,19 +95,12 @@ const Hero = () => {
             style={{ scale: contentScale, y: contentY }}
             className="relative z-10 mx-auto flex max-w-[960px] flex-col items-center px-6 text-center will-change-transform sm:px-10"
           >
-            {/* Stage 0 (Visible on Load): Eyebrow */}
-            {/* <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 backdrop-blur-md">
-              <span className="h-2 w-2 rounded-full bg-[var(--primary)]" />
-              <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.18em] text-white/90">
-                Machwares • Digital Marketing & Growth Agency
-              </span>
-            </div> */}
 
             {/* Stage 0 (Visible on Load): Heading */}
             <h1 className="font-[var(--font-display)] text-3xl font-bold leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl lg:text-[4rem]">
-              Connecting brands with the{" "}
-              <span className="text-[var(--primary)]">right audience.</span>{" "}
-              Driving growth that matters.
+              Connecting brands with{" "}
+              <span className="text-[var(--primary)]">Performance-First</span>{" "}
+              Opportunities
             </h1>
 
             {/* Stage 1 (6% -> 26% scroll): Subtext */}
@@ -119,10 +112,7 @@ const Hero = () => {
               }}
               className="mt-5 max-w-[620px] font-[var(--font-body)] text-sm leading-relaxed text-white/80 will-change-transform sm:text-lg"
             >
-              We help brands grow through strategic digital marketing,
-              performance-driven campaigns, affiliate partnerships, and
-              influencer collaborations—connecting your business with
-              the right people across the digital landscape.
+              Machwares helps brands grow through strategic digital marketing, performance campaigns, affiliate partnerships, and mobile performance marketing, connecting your business with the right customers across the United States.
             </motion.p>
 
             {/* Stage 2 (24% -> 44% scroll): Buttons */}
@@ -172,7 +162,8 @@ const Hero = () => {
               {[
                 "Performance Marketing",
                 "Affiliate Partnerships",
-                "Influencer Marketing",
+                "Digital Marketing",
+                "Mobile Performance Marketing"
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Check

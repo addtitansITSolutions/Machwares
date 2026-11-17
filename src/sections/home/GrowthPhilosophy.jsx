@@ -11,17 +11,17 @@ import {
 const growthPillars = [
   {
     icon: Target,
-    label: "01 / RELEVANCE",
-    title: "Reach the Right People",
+    label: "01 / Accountability",
+    title: "Measured Past the Click",
     description:
-      "Meaningful marketing starts with understanding who you want to reach. We focus on connecting brands with audiences that matter.",
+      "We track installs, in-app actions, and revenue against your target cost per acquisition and return on ad spend, not impressions or reach.",
   },
   {
     icon: Network,
-    label: "02 / CONNECTION",
-    title: "Build Valuable Connections",
+    label: "02 / Allocation",
+    title: "Budget Follows Performance",
     description:
-      "From affiliate partnerships to creator collaborations, we believe strong connections create opportunities for brands to grow.",
+      "Performance, affiliate, digital, and mobile campaigns work toward one set of goals, so spend shifts to the channels and partners that deliver.",
   },
 ];
 
@@ -48,17 +48,15 @@ const GrowthPhilosophy = () => {
           </div>
 
           <h2 className="font-[var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-[var(--dark)] sm:text-5xl lg:text-6xl">
-            More than marketing.
+            We don’t chase traffic.
             <br />
             <span className="text-[var(--primary)]">
-              Meaningful growth.
+               We chase results.
             </span>
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-[var(--text)] sm:text-lg">
-            Great marketing is not just about being seen. It is about reaching
-            the right audience, creating meaningful connections, and making
-            every opportunity count.
+            We evaluate our campaigns by what happens after the click: the install, the sign-up, the purchase. That standard shapes how we plan, partner, and optimize.
           </p>
         </motion.div>
 
@@ -89,20 +87,17 @@ const GrowthPhilosophy = () => {
               </span>
 
               <h3 className="mt-6 max-w-xl font-[var(--font-display)] text-3xl font-bold leading-[1.2] tracking-tight sm:text-4xl lg:text-[2.7rem]">
-                The right audience.
+                Real users.
                 <br />
-                The right strategy.
+                 Real actions.
                 <br />
                 <span className="text-[var(--primary)]">
-                  The opportunity to grow.
+                   Real return.
                 </span>
               </h3>
 
               <p className="mt-6 max-w-lg text-sm leading-7 text-white/65 sm:text-base">
-                At Machwares, we bring together digital marketing,
-                performance campaigns, affiliate partnerships, and influencer
-                collaborations to help brands make stronger connections in
-                the digital world.
+                Machwares combines paid performance campaigns, affiliate publishers, and mobile user acquisition into one accountable program, with every channel held to the same cost and revenue targets.
               </p>
             </div>
 

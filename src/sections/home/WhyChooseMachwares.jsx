@@ -13,28 +13,28 @@ const reasons = [
     number: "01",
     title: "Audience-First Approach",
     description:
-      "We focus on understanding your audience, their interests, and their needs to help your brand connect with the people who matter.",
+      "We start by understanding your audience, including their interests, behaviors, and needs, so your brand connects with consumers who matter most.",
     icon: Target,
   },
   {
     number: "02",
     title: "Performance-Focused Thinking",
     description:
-      "Every campaign starts with a clear purpose. We focus on meaningful outcomes, campaign performance, and opportunities to improve.",
+      "Every campaign begins with a clear purpose. We focus on measurable outcomes, campaign performance, and opportunities for improvement.",
     icon: TrendingUp,
   },
   {
     number: "03",
     title: "Strategic Partnerships",
     description:
-      "We believe in the power of collaboration, building valuable relationships between brands, publishers, creators, and audiences.",
+      "We believe in the power of collaboration, building valuable relationships between brands, publishers, and audiences.",
     icon: Handshake,
   },
   {
     number: "04",
     title: "Insight-Led Growth",
     description:
-      "We use campaign insights and performance data to identify opportunities, refine strategies, and help brands move forward.",
+      "We use campaign insights and performance data to identify opportunities, refine strategies, and drive growth across mobile and digital channels.",
     icon: Lightbulb,
   },
 ];
@@ -74,9 +74,7 @@ const WhyChooseMachwares = () => {
           </div>
 
           <p className="max-w-md font-[var(--font-body)] text-sm leading-7 text-[var(--text)] sm:text-base lg:pb-1">
-            Growing a brand takes more than visibility. It takes the right
-            strategy, meaningful connections, and a clear focus on what
-            matters.
+            Impressions don’t pay the bills. We build campaigns around audience data, measurable results, and partnerships that deliver, so every dollar of ad spend pays off.
           </p>
         </motion.div>
 

@@ -49,15 +49,13 @@ const WhatWeDo = () => {
             <h2 className="font-[var(--font-display)] text-3xl font-bold leading-[1.08] tracking-[-0.035em] text-[var(--dark)] sm:text-4xl lg:text-5xl">
               Marketing that connects.
               <span className="text-[var(--primary)]">
-                {" "}Growth that performs.
+                {" "}Growth that leads.
               </span>
             </h2>
           </div>
 
           <p className="max-w-md font-[var(--font-body)] text-sm leading-relaxed text-[var(--text)] sm:text-base lg:pb-1">
-            From reaching the right audience to turning attention into action,
-            we bring together strategic marketing, powerful partnerships and
-            performance-driven campaigns to help brands move forward.
+            From reaching the right audience to driving measurable action, Machwares combines strategic marketing, publisher partnerships, and mobile-first performance campaigns to help brands move forward.
           </p>
         </motion.div>
 
@@ -107,9 +105,7 @@ const WhatWeDo = () => {
                   </h3>
 
                   <p className="mt-4 font-[var(--font-body)] text-sm leading-relaxed text-white/85 sm:text-[15px]">
-                    Turn marketing investment into measurable opportunities
-                    through targeted advertising, strategic campaigns and
-                    data-led optimization focused on meaningful results.
+                    Turn marketing investment into measurable results through targeted advertising, strategic campaigns, and data-led optimization focused on return on ad spend.
                   </p>
 
                   <div className="mt-6 flex flex-wrap gap-2">
@@ -267,9 +263,7 @@ const WhatWeDo = () => {
                 </h3>
 
                 <p className="mt-3 font-[var(--font-body)] text-sm leading-relaxed text-white/65">
-                  Build valuable partnerships with publishers and affiliates
-                  who help expand your reach, introduce new audiences and
-                  drive performance-based growth.
+                  Build valuable partnerships with publishers and affiliates who expand your reach and drive performance-based growth.
                 </p>
               </div>
             </div>
@@ -346,9 +340,7 @@ const WhatWeDo = () => {
                 </h3>
 
                 <p className="mt-3 font-[var(--font-body)] text-sm leading-relaxed text-[var(--text)]">
-                  Strengthen your online presence through a connected digital
-                  approach spanning search visibility, social media, content
-                  and mobile advertising.
+                  Strengthen your online presence through a connected digital approach across search visibility, social media, and content marketing. 
                 </p>
               </div>
             </div>
@@ -370,7 +362,7 @@ const WhatWeDo = () => {
                 <div className="inline-flex items-center gap-2.5 rounded-xl bg-[var(--secondary)] px-3.5 py-2">
                   <Users size={17} className="text-[var(--primary)]" />
                   <span className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.14em] text-[var(--dark)]">
-                    04 • Creator Collaborations
+                    04 • Mobile Growth
                   </span>
                 </div>
 
@@ -383,13 +375,11 @@ const WhatWeDo = () => {
               <div className="mt-8 grid grid-cols-1 items-end gap-8 sm:grid-cols-12">
                 <div className="sm:col-span-6">
                   <h3 className="font-[var(--font-display)] text-3xl font-bold leading-[1.1] tracking-[-0.03em] text-[var(--dark)] sm:text-4xl">
-                    Influencer Marketing
+                    Mobile Performance Marketing
                   </h3>
 
                   <p className="mt-4 font-[var(--font-body)] text-sm leading-relaxed text-[var(--text)] sm:text-[15px]">
-                    Bring your brand closer to the people who matter through
-                    authentic creator partnerships, engaging collaborations
-                    and meaningful social influence.
+                    Reach consumers where they spend most of their time: on their phones. We drive app installs, in-app actions, and long-term mobile growth through data-driven user acquisition across iOS and Android.
                   </p>
                 </div>
 
@@ -406,10 +396,10 @@ const WhatWeDo = () => {
                       </div>
                       <div>
                         <p className="font-[var(--font-display)] text-xs font-bold text-[var(--dark)]">
-                          Creator Partnerships
+                          App User Acquisition
                         </p>
                         <p className="text-[11px] text-[var(--text)]">
-                          Connecting brands with relevant voices
+                          Driving installs from high-intent mobile users
                         </p>
                       </div>
                     </motion.div>
@@ -429,10 +419,10 @@ const WhatWeDo = () => {
                       </div>
                       <div>
                         <p className="font-[var(--font-display)] text-xs font-bold text-[var(--dark)]">
-                          Campaign Storytelling
+                          In-App Performance
                         </p>
                         <p className="text-[11px] text-[var(--text)]">
-                          Content that builds brand connections
+                          Optimizing for actions that generate revenue
                         </p>
                       </div>
                     </motion.div>
@@ -461,8 +451,7 @@ const WhatWeDo = () => {
                 Ready to reach the right audience?
               </p>
               <p className="mt-1 font-[var(--font-body)] text-sm text-[var(--text)]">
-                Let's explore how the right marketing strategy can move your
-                brand forward.
+                Let’s discuss how the right marketing strategy can move your brand forward.
               </p>
             </div>
           </div>

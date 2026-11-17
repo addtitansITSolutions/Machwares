@@ -38,8 +38,8 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Machwares | Digital Marketing & Growth Agency"
-        description="Machwares helps brands reach the right audience and grow through performance marketing, affiliate partnerships, digital marketing, and influencer campaigns."
+        title="Machwares | Performance, Affiliate & Mobile Performance Marketing"
+        description="Machwares helps brands grow through performance marketing, affiliate partnerships, digital marketing, and mobile performance marketing."
         path="/"
       />
 

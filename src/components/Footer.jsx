@@ -109,6 +109,13 @@ const Footer = () => {
               We'd love to hear from you.
             </p>
 
+            <br />
+
+            <p>
+              HQ Address <br /><br />
+              B-27 , R.P.S OMAXE GREEN VALLEY , SECTOR - 41/42 , NEAR GREEN FIELDS COLONY , FARIDABAD , Haryana , India , 122010
+            </p>
+
             <Link
               to="/contact"
               className="mt-5 inline-flex items-center gap-2 border-b border-[var(--primary)] pb-1 font-[var(--font-body)] text-xs font-bold uppercase tracking-wider text-white transition-colors duration-300 hover:text-[var(--primary)]"

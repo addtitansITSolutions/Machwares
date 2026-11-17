@@ -26,10 +26,10 @@ export const serviceItems = [
   },
   {
     number: "04",
-    name: "Influencer Marketing",
-    path: "/services/influencer-marketing",
+    name: "Mobile Performance Marketing",
+    path: "/services/mobile-performance-marketing",
     description:
-      "Build meaningful brand connections through trusted creators and social influence.",
+      "Acquire and engage mobile users through targeted campaigns focused on measurable installs, actions, and growth.",
   },
 ];
 

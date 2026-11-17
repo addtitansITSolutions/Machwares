@@ -31,7 +31,7 @@ const processSteps = [
     phase: "Strategize & Plan",
     title: "Building the Right Marketing Strategy",
     description:
-      "With clear goals in place, we develop a focused marketing approach. From audience targeting and channel selection to campaign planning, every activity is aligned with your business objectives.",
+      "With clear goals in place, we develop a focused marketing approach. From audience targeting and channel selection to campaign planning, every activity aligns with your business objectives.",
     deliverable: "Campaign Strategy & Action Plan",
     timeframe: "The Roadmap",
     icon: ClipboardList,
@@ -48,7 +48,7 @@ const processSteps = [
   },
   {
     step: "04",
-    phase: "Measure & Optimize",
+    phase: " Measuring, Optimizing & Scaling",
     title: "Learning, Improving & Growing",
     description:
       "We monitor campaign activity, evaluate performance and identify opportunities to improve. By learning from the data, we help refine marketing efforts and support sustainable brand growth.",
@@ -103,9 +103,7 @@ const MachwaresProcess = () => {
           </div>
 
           <p className="max-w-md font-[var(--font-body)] text-sm leading-relaxed text-[var(--text)] sm:text-base lg:pb-1">
-            Great marketing starts with understanding. Our four-step approach
-            brings strategy, execution and continuous improvement together
-            to help your brand reach the right audience.
+            Four steps, one goal: measurable growth. We move from audience research to launch to optimization, tracking every campaign against the numbers that matter to your business.
           </p>
         </motion.div>
 
@@ -251,7 +249,7 @@ const MachwaresProcess = () => {
                   {[
                     "Audience-First Thinking",
                     "Strategy-Led Campaigns",
-                    "Meaningful Partnerships",
+                    "Mobile-First Execution",
                     "Continuous Improvement",
                   ].map((value) => (
                     <div key={value} className="flex items-start gap-2">

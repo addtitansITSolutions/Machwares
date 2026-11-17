@@ -61,6 +61,7 @@ import { Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import Home from "./pages/Home";
+import Contact from './pages/Contact'
 import UnderDevelopment from "./pages/UnderDevelopment";
 
 import "./App.css";
@@ -73,6 +74,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path="*" element={<UnderDevelopment />} />
       </Routes>
 
