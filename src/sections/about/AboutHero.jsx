@@ -22,20 +22,20 @@ const AboutHero = () => {
             and partnerships built around meaningful growth.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-5">
+          <div className="mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center sm:gap-5">
             <a
               href="#who-we-are"
-              className="inline-flex items-center gap-2 rounded-lg bg-[var(--primary)] px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-red-700"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--primary)] px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-red-700 sm:w-auto"
             >
               Discover Machwares
               <ArrowUpRight size={18} />
             </a>
 
             <a
-              href="#our-expertise"
-              className="inline-flex items-center gap-2 text-sm font-bold text-[var(--dark)] transition-colors hover:text-[var(--primary)]"
+              href="#how-we-create-impact"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-transparent px-6 py-4 text-sm font-bold text-[var(--dark)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)] sm:w-auto"
             >
-              What we do
+              How we create impact
               <ArrowDownRight size={17} />
             </a>
           </div>

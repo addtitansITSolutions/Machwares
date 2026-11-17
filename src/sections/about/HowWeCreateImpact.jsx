@@ -112,10 +112,10 @@ const ImpactIllustration = ({ type }) => {
 
 const HowWeCreateImpact = () => {
   return (
-    <section className="bg-[var(--light)] px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
+    <section className="bg-[var(--light)] px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28" id="how-we-create-impact">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 max-w-7xl">
-          <div className="mb-6 flex w-full items-end justify-between gap-10">
+          <div className="mb-6 flex w-full items-end justify-between gap-10 flex-wrap sm:mb-10">
             <div className="max-w-xl">
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
                 How We Create Impact
