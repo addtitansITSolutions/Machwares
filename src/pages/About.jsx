@@ -1,31 +1,46 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import AboutHero from "../sections/about/AboutHero";
-import AboutStory from "../sections/about/AboutStory";
-import ClientsCarousel from "../sections/about/ClientsCarousel";
-import IndustriesWeServe from "../sections/about/IndustriesWeServe";
-import WhatMakesUsDifferent from "../sections/about/WhatMakesUsDifferent";
 import SEO from "../components/SEO";
-// import WhatDrivesUs from "../sections/about/WhatDrivesUs";
+import StackSection from "../components/StackSection";
+
+import AboutHero from "../sections/about/AboutHero";
+import MissionVision from "../sections/about/MissionVision";
+import WhoWeAre from "../sections/about/WhoWeAre";
+import WhatDrivesUs from "../sections/about/WhatDrivesUs";
+import HowWeCreateImpact from "../sections/about/HowWeCreateImpact";
 
 const About = () => {
   return (
     <>
       <SEO
-        title="About Go Purple Nut"
-        description="Learn how Go Purple Nut brings strategy, creativity, and performance together to build meaningful digital growth for brands."
+        title="About Machwares | Digital Marketing & Growth Agency"
+        description="Discover Machwares, a digital marketing and growth agency helping brands connect with the right audiences through performance marketing, affiliate partnerships, and strategic digital campaigns."
         path="/about"
       />
-      <Navbar forceScrolled={true}/>
+
+      <Navbar forceScrolled={true} />
 
       <main>
-        <AboutHero />
-        <AboutStory />
-        <WhatMakesUsDifferent />
-        <ClientsCarousel />
-        {/* <WhatDrivesUs /> */}
-        <IndustriesWeServe />
-        {/* More About sections will come here */}
+        <StackSection zIndex={1}>
+          <AboutHero />
+        </StackSection>
+
+        <StackSection zIndex={2}>
+          <WhoWeAre />
+        </StackSection>
+
+        <StackSection zIndex={3}>
+          <HowWeCreateImpact />
+        </StackSection>
+
+        <StackSection zIndex={4}>
+          <WhatDrivesUs />
+        </StackSection>
+
+        {/* last one doesn't need to pin; it scrolls away normally into the footer */}
+        <StackSection zIndex={5} sticky={false}>
+          <MissionVision />
+        </StackSection>
       </main>
 
       <Footer />

@@ -63,6 +63,7 @@ import { Toaster } from "react-hot-toast";
 import Home from "./pages/Home";
 import Contact from './pages/Contact'
 import UnderDevelopment from "./pages/UnderDevelopment";
+import About from './pages/About'
 
 import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
@@ -76,6 +77,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path='/contact' element={<Contact />} />
         <Route path="*" element={<UnderDevelopment />} />
+        <Route path='/about' element={<About />} />
       </Routes>
 
       <Toaster position="top-right" reverseOrder={false} />

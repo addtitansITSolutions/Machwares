@@ -1,161 +1,237 @@
 import { motion } from "framer-motion";
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Target, TrendingUp, Network } from "lucide-react";
 
 const AboutHero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#100C1C] text-white">
-      {/* Background Glow */}
-      <div className="pointer-events-none absolute -left-40 top-10 h-[350px] w-[350px] rounded-full bg-[var(--primary)]/20 blur-[110px]" />
+    <section className="relative overflow-hidden bg-white pt-32 sm:pt-36 lg:pt-40">
+      <div className="pointer-events-none absolute -right-40 top-10 h-[500px] w-[500px] rounded-full bg-[var(--primary)]/[0.045] blur-[100px]" />
 
-      <div className="pointer-events-none absolute -right-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[var(--secondary)]/10 blur-[120px]" />
+      <div className="relative mx-auto grid max-w-[1400px] items-center gap-14 px-6 pb-20 sm:px-10 sm:pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-16 lg:pb-28 xl:px-20">
 
-      {/* Subtle Grid */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.03]">
-        <div
-          className="h-full w-full"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)",
-            backgroundSize: "80px 80px",
+        {/* Left Content */}
+        <div className="relative z-10">
+          <h1 className="max-w-[850px] font-[var(--font-display)] text-[clamp(3.2rem,6.5vw,6.5rem)] font-semibold leading-[0.98] tracking-[-0.065em] text-[var(--dark)]">
+            Growth begins with{" "}
+            <span className="text-[var(--primary)]">the right</span>{" "}
+            connections.
+          </h1>
+
+          <p className="mt-8 max-w-[590px] text-base leading-8 text-[var(--text)] sm:text-lg">
+            We bring brands, audiences, and opportunities closer through
+            thoughtful marketing strategies, performance-driven campaigns,
+            and partnerships built around meaningful growth.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-5">
+            <a
+              href="#who-we-are"
+              className="inline-flex items-center gap-2 rounded-lg bg-[var(--primary)] px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-red-700"
+            >
+              Discover Machwares
+              <ArrowUpRight size={18} />
+            </a>
+
+            <a
+              href="#our-expertise"
+              className="inline-flex items-center gap-2 text-sm font-bold text-[var(--dark)] transition-colors hover:text-[var(--primary)]"
+            >
+              What we do
+              <ArrowDownRight size={17} />
+            </a>
+          </div>
+        </div>
+
+        
+        {/* Right Visual */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92, x: 30 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{
+            duration: 1,
+            delay: 0.15,
+            ease: [0.22, 1, 0.36, 1],
           }}
-        />
-      </div>
+          className="relative mx-auto w-full max-w-[600px] lg:ml-auto"
+        >
 
-      <div className="relative mx-auto max-w-7xl px-6 pb-14 pt-28 sm:px-8 sm:pb-16 lg:px-10 lg:pb-20 lg:pt-36">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
-          
-          {/* LEFT CONTENT */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            {/* Eyebrow */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-6 flex items-center gap-3"
+          {/* bg-[#F0F1F2] */}
+          <div className="relative aspect-[1/1] overflow-hidden rounded-[2rem] ">
+
+            {/* Background SVG Pattern */}
+            <svg
+              className="absolute inset-0 h-full w-full"
+              viewBox="0 0 600 600"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              {/* <span className="h-px w-9 bg-[var(--secondary)]" /> */}
+              <defs>
+                <pattern
+                  id="aboutGrid"
+                  width="32"
+                  height="32"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M32 0H0V32"
+                    stroke="#1A1D1F"
+                    strokeOpacity=".055"
+                  />
+                </pattern>
 
-              <span className="font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.22em] text-white/60">
-                About GoPurple
-              </span>
-            </motion.div>
+                <radialGradient id="aboutGlow">
+                  <stop stopColor="#D42027" stopOpacity=".16" />
+                  <stop offset="1" stopColor="#D42027" stopOpacity="0" />
+                </radialGradient>
 
-            {/* Heading */}
-            <h1 className="max-w-2xl font-[var(--font-display)] text-4xl font-semibold leading-[1.04] tracking-[-0.04em] sm:text-5xl lg:text-[64px]">
-              Built To Deliver Results{" "}
-              <span className="text-[var(--primary)]">
-                That Hold Up
-              </span>
-            </h1>
+                <linearGradient id="platformGradient" x1="130" y1="180" x2="450" y2="470">
+                  <stop stopColor="#34393C" />
+                  <stop offset="1" stopColor="#111416" />
+                </linearGradient>
 
-            {/* Description */}
-            <p className="mt-6 max-w-xl font-[var(--font-body)] text-sm leading-7 text-white/60 sm:text-base sm:leading-7">
-             The digital world is an ever-evolving landscape. What customers expect keeps changing. Platforms
-             keep updating. Competing brands keep sharpening their approach.
-            </p>
+                <linearGradient id="redGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop stopColor="#FA5157" />
+                  <stop offset="1" stopColor="#A90F17" />
+                </linearGradient>
 
-            {/* CTA */}
-            <motion.a
-              href="#our-story"
-              whileHover={{ y: -3 }}
-              whileTap={{ scale: 0.98 }}
-              className="group mt-8 inline-flex items-center gap-3 font-[var(--font-body)] text-[10px] font-bold uppercase tracking-[0.16em] text-white"
-            >
-              Discover our story
+                <linearGradient id="glassGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop stopColor="#FFFFFF" stopOpacity=".98" />
+                  <stop offset="1" stopColor="#E9ECEE" stopOpacity=".92" />
+                </linearGradient>
 
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all duration-300 group-hover:border-[var(--secondary)] group-hover:bg-[var(--secondary)] group-hover:text-[var(--dark)]">
-                <ArrowDownRight
-                  size={16}
-                  strokeWidth={1.8}
-                  className="transition-transform duration-300 group-hover:rotate-[-45deg]"
-                />
-              </span>
-            </motion.a>
-          </motion.div>
+                <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="12" />
+                </filter>
+              </defs>
 
-          {/* RIGHT IMAGE */}
-          <motion.div
-            initial={{ opacity: 0, x: 35 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            className="relative"
-          >
-            <div className="relative ml-auto w-full max-w-[600px]">
-              
-              {/* Purple Accent */}
-              <motion.div
-                initial={{ height: 0 }}
-                whileInView={{ height: "42%" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.9, delay: 0.3 }}
-                className="absolute -left-3 top-6 z-10 w-1 bg-[var(--primary)]"
+              <rect width="600" height="600" fill="url(#aboutGrid)" />
+
+              <circle cx="420" cy="170" r="210" fill="url(#aboutGlow)" />
+
+              {/* Background decorative curves */}
+              <path
+                d="M-20 420C100 330 145 490 260 400C370 315 450 380 630 230"
+                stroke="#D42027"
+                strokeOpacity=".12"
+                strokeWidth="1.5"
+                strokeDasharray="5 8"
               />
 
-              {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10]">
-                <motion.img
-                  src="/Aboutus/aboutus.jpg"
-                  alt="Creative team working together"
-                  className="h-full w-full object-cover"
-                  initial={{ scale: 1.1 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 1.2,
-                    ease: "easeOut",
+              <path
+                d="M-20 450C100 360 145 520 260 430C370 345 450 410 630 260"
+                stroke="#1A1D1F"
+                strokeOpacity=".07"
+              />
+
+              <circle cx="95" cy="130" r="3" fill="#D42027" />
+              <circle cx="500" cy="420" r="4" fill="#D42027" />
+              <circle cx="450" cy="90" r="2" fill="#1A1D1F" />
+            </svg>
+
+            {/* Decorative 3D composition */}
+            <div
+              className="absolute inset-0 flex items-center justify-center"
+              style={{ perspective: "1100px" }}
+            >
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative h-[76%] w-[84%]"
+                style={{
+                  transform: "rotateX(53deg) rotateZ(-35deg)",
+                  transformStyle: "preserve-3d",
+                }}
+              >
+
+                {/* Platform Shadow */}
+                <div
+                  className="absolute inset-[8%] rounded-[30px] bg-black/20 blur-2xl"
+                  style={{ transform: "translateZ(-70px) translateY(30px)" }}
+                />
+
+                {/* Platform Bottom Layer */}
+                <div
+                  className="absolute inset-[8%] rounded-[30px] border border-white/10 bg-[#171B1E]"
+                  style={{
+                    transform: "translateZ(-45px)",
+                    boxShadow: "0 30px 40px rgba(0,0,0,.2)",
                   }}
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#100C1C]/60 via-transparent to-transparent" />
+                {/* Platform Top */}
+                <div
+                  className="absolute inset-[8%] overflow-hidden rounded-[30px] border border-white/10"
+                  style={{
+                    transform: "translateZ(-15px)",
+                    background: "linear-gradient(145deg,#343A3E,#171B1E)",
+                  }}
+                >
+                  <svg
+                    viewBox="0 0 400 400"
+                    className="absolute inset-0 h-full w-full"
+                    fill="none"
+                  >
+                    {Array.from({ length: 9 }).map((_, i) => (
+                      <g key={i}>
+                        <path
+                          d={`M${i * 50} 0V400`}
+                          stroke="white"
+                          strokeOpacity=".07"
+                        />
+                        <path
+                          d={`M0 ${i * 50}H400`}
+                          stroke="white"
+                          strokeOpacity=".07"
+                        />
+                      </g>
+                    ))}
+                  </svg>
+                </div>
 
-                {/* Image Label */}
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                  <div>
-                    <p className="font-[var(--font-body)] text-[8px] font-bold uppercase tracking-[0.2em] text-white/60">
-                      GoPurple
-                    </p>
-
-                    <p className="mt-1 font-[var(--font-display)] text-base font-medium text-white sm:text-lg">
-                      Ideas × Execution
-                    </p>
+                {/* Main Red 3D Block */}
+                <div
+                  className="absolute left-[36%] top-[30%] h-[34%] w-[34%] rounded-[22px]"
+                  style={{
+                    transform: "translateZ(55px)",
+                    background: "linear-gradient(145deg,#F23B43,#B60D17)",
+                    boxShadow:
+                      "12px 18px 0 #8F1017, 22px 30px 35px rgba(0,0,0,.35)",
+                  }}
+                >
+                  <div className="flex h-full flex-col items-center justify-center text-white">
+                    <span className="text-5xl font-bold tracking-[-0.09em]">
+                      M<span className="text-white/55">.</span>
+                    </span>
+                    <span className="mt-1 text-[8px] font-bold uppercase tracking-[0.25em]">
+                      Machwares
+                    </span>
                   </div>
 
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[var(--dark)]">
-                    <ArrowUpRight size={15} strokeWidth={1.8} />
-                  </span>
+                  <div className="absolute -right-2 -top-2 h-5 w-5 rounded-full border-4 border-[#F0F1F2] bg-[#D42027]" />
                 </div>
-              </div>
 
-              {/* Floating Number */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.7,
-                  delay: 0.6,
-                }}
-                className="absolute -bottom-4 -left-4 hidden bg-[var(--secondary)] px-5 py-4 text-[var(--dark)] sm:block"
-              >
-                <span className="block font-[var(--font-display)] text-2xl font-bold leading-none">
-                  01
-                </span>
-
-                <span className="mt-1.5 block font-[var(--font-body)] text-[8px] font-bold uppercase tracking-[0.16em]">
-                  Our story
-                </span>
+                {/* Small red dimensional element */}
+                <div
+                  className="absolute bottom-[13%] left-[12%] h-[13%] w-[13%] rounded-lg"
+                  style={{
+                    transform: "translateZ(65px)",
+                    background: "linear-gradient(145deg,#FA5157,#B90E19)",
+                    boxShadow: "5px 7px 0 #870D14, 8px 12px 20px rgba(0,0,0,.2)",
+                  }}
+                />
               </motion.div>
             </div>
-          </motion.div>
-        </div>
+
+          </div>
+
+          <p className="mt-5 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--text)]">
+            Bringing brands and opportunities together
+          </p>
+        </motion.div>
+
       </div>
     </section>
   );

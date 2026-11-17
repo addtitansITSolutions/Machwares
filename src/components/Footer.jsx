@@ -113,7 +113,7 @@ const Footer = () => {
 
             <p>
               HQ Address <br /><br />
-              B-27 , R.P.S OMAXE GREEN VALLEY , SECTOR - 41/42 , NEAR GREEN FIELDS COLONY , FARIDABAD , Haryana , India , 122010
+              R.P.S OMAXE GREEN VALLEY , SECTOR - 41/42 , NEAR GREEN FIELDS COLONY , FARIDABAD , Haryana , India , 122010
             </p>
 
             <Link
