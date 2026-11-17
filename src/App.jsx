@@ -62,20 +62,24 @@ import { Toaster } from "react-hot-toast";
 
 import Home from "./pages/Home";
 import Contact from './pages/Contact'
+import Services from './pages/Services'
 import UnderDevelopment from "./pages/UnderDevelopment";
 import About from './pages/About'
 
 import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
+import PageTransition from "./components/PageTransition";
 
 const App = () => {
   return (
     <div>
       <ScrollToTop />
+      <PageTransition />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/services' element={<Services />} />
         <Route path="*" element={<UnderDevelopment />} />
         <Route path='/about' element={<About />} />
       </Routes>
