@@ -1,9 +1,9 @@
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import SEO from "../../components/SEO";
-import AffiliateMarketingHero from "../../sections/AffiliateMarketing/AffiliateMarketingHero";
-import AffiliateMarketingIntro from "../../sections/AffiliateMarketing/AffiliateMarketingIntro";
-import AffiliateMarketingWhy from "../../sections/AffiliateMarketing/AffiliateMarketingWhy";
+import AffiliateMarketingHero from "../../sections/services/AffiliateMarketing/AffiliateMarketingHero";
+import AffiliateMarketingIntro from "../../sections/services/AffiliateMarketing/AffiliateMarketingIntro";
+import AffiliateMarketingWhy from "../../sections/services/AffiliateMarketing/AffiliateMarketingWhy";
 
 
 
