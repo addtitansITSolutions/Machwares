@@ -20,7 +20,7 @@ const WhatWeDo = () => {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-[#F8F9FA] py-24 sm:py-28 lg:py-32"
+      className="relative overflow-hidden bg-[#F8F9FA] py-24 sm:py-28 lg:py-32 lg:pb-10"
     >
       {/* Top Divider */}
       <div
