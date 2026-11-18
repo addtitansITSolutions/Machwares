@@ -7,6 +7,7 @@ import {
   TrendingUp,
   ChartNoAxesCombined,
 } from "lucide-react";
+import PerformanceMarketingVisual from "../../../components/servicesvisuls/PerformanceMarketingVisual";
 
 const highlights = [
   {
@@ -34,7 +35,7 @@ const PerformanceMarketingHero = () => {
         {/* Main Hero */}
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
-          {/* Left Image */}
+          {/* Left Animation */}
           <motion.div
             initial={{ opacity: 0, x: -35 }}
             animate={{ opacity: 1, x: 0 }}
@@ -42,51 +43,9 @@ const PerformanceMarketingHero = () => {
               duration: 0.9,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative"
+            className="relative flex items-center justify-center"
           >
-            <div className="relative overflow-hidden rounded-3xl bg-[var(--secondary)]">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85"
-                alt="Digital marketing analytics displayed on a laptop"
-                className="aspect-[4/4.2] w-full object-cover sm:aspect-[5/4] lg:aspect-[4/4.5]"
-              />
-
-              {/* Image overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-
-              {/* Image caption */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white sm:p-8">
-                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/75">
-                  Strategy meets performance
-                </p>
-                <h2 className="max-w-sm font-[var(--font-display)] text-2xl font-semibold leading-tight sm:text-3xl">
-                  Turning marketing efforts into meaningful outcomes.
-                </h2>
-              </div>
-            </div>
-
-            {/* Floating metric-style card */}
-            <motion.div
-              animate={{ y: [0, -7, 0] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute -bottom-6 -right-3 flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-xl sm:-right-6 sm:p-5"
-            >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-red-50 text-[var(--primary)]">
-                <TrendingUp size={22} />
-              </div>
-              <div>
-                <p className="text-xs text-[var(--text)]">
-                  Our focus
-                </p>
-                <p className="text-sm font-bold text-[var(--dark)]">
-                  Measurable growth
-                </p>
-              </div>
-            </motion.div>
+            <PerformanceMarketingVisual />
           </motion.div>
 
           {/* Right Content */}
@@ -142,7 +101,7 @@ const PerformanceMarketingHero = () => {
         </div>
 
         {/* Bottom Highlights */}
-        <div className="mt-20 grid gap-8 border-t border-[var(--border)] pt-9 sm:grid-cols-3 sm:gap-6 lg:mt-24">
+        {/* <div className="mt-20 grid gap-8 border-t border-[var(--border)] pt-9 sm:grid-cols-3 sm:gap-6 lg:mt-24">
           {highlights.map((item, index) => {
             const Icon = item.icon;
 
@@ -172,7 +131,7 @@ const PerformanceMarketingHero = () => {
               </motion.div>
             );
           })}
-        </div>
+        </div> */}
 
       </div>
     </section>

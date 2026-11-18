@@ -64,6 +64,8 @@ import Home from "./pages/Home";
 import Contact from './pages/Contact'
 import Services from './pages/Services'
 import PerformanceMarketing from './pages/services/PerformanceMarketing'
+import AffiliateMarketing from "./pages/services/AffiliateMarketing";
+import DigitalMarketing from "./pages/services/DigitalMarketing";
 import UnderDevelopment from "./pages/UnderDevelopment";
 import About from './pages/About'
 
@@ -71,6 +73,7 @@ import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
 import PageTransition from "./components/PageTransition";
 import PageTransition2 from "./components/PageTransition2";
+import MobilePerformanceMarketing from "./pages/services/MobilePerformanceMarketing";
 
 const App = () => {
   return (
@@ -84,6 +87,9 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/services' element={<Services />} />
         <Route path='/services/performance-marketing' element={<PerformanceMarketing />} />
+        <Route path='/services/affiliate-marketing' element={<AffiliateMarketing />} />
+        <Route path='/services/digital-marketing' element={<DigitalMarketing />} />
+        <Route path='/services/mobile-performance-marketing' element={<MobilePerformanceMarketing />} />
         <Route path="*" element={<UnderDevelopment />} />
         <Route path='/about' element={<About />} />
       </Routes>

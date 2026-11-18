@@ -58,7 +58,6 @@ const WhatIsPerformanceMarketing = () => {
         >
           <div>
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-[2px] w-8 bg-[var(--primary)]" />
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
                 Understanding Performance Marketing
               </span>

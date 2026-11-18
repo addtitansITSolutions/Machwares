@@ -114,26 +114,37 @@ const HowWeCreateImpact = () => {
   return (
     <section className="bg-[var(--light)] px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28" id="how-we-create-impact">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 max-w-7xl">
-          <div className="mb-6 flex w-full items-end justify-between gap-10 flex-wrap sm:mb-10">
-            <div className="max-w-xl">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
-                How We Create Impact
-              </p>
+        
 
-              <p className="text-base leading-8 text-[var(--text)]">
-                We believe effective marketing is about more than visibility.
-                It's about creating connections that lead to valuable
-                opportunities and meaningful progress.
-              </p>
-            </div>
+{/* Section Heading */}
+<div className="mb-14 w-full">
+  <div className="flex w-full flex-col justify-between gap-8 lg:flex-row lg:items-end lg:gap-12">
 
-            <h2 className="max-w-2xl text-right font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
-              Turning the right connections into{" "}
-              <span className="text-[var(--primary)]">real opportunities.</span>
-            </h2>
-          </div>
-        </div>
+    {/* Left Content */}
+    <div className="w-full lg:w-[42%]">
+      <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
+        How We Create Impact
+      </p>
+
+      <p className="text-base leading-8 text-[var(--text)]">
+        We believe effective marketing is about more than visibility.
+        It's about creating connections that lead to valuable
+        opportunities and meaningful progress.
+      </p>
+    </div>
+
+    {/* Right Heading */}
+    <h2 className="w-full font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:w-[58%] lg:text-right lg:text-6xl">
+      Turning the right connections into{" "}
+      <span className="text-[var(--primary)]">
+        real opportunities.
+      </span>
+    </h2>
+
+  </div>
+</div>
+
+
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {impactAreas.map((item) => {
