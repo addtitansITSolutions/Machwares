@@ -72,9 +72,9 @@ export const DesktopServicesMenu = ({ isOpen, onClose }) => {
             </div>
 
             <div className="hidden shrink-0 text-right sm:block">
-              <span className="font-[var(--font-display)] text-4xl font-bold text-white/10">
+              {/* <span className="font-[var(--font-display)] text-4xl font-bold text-white/10">
                 04
-              </span>
+              </span> */}
               <p className="font-[var(--font-body)] text-[9px] font-semibold uppercase tracking-widest text-white/40">
                 Core Services
               </p>
