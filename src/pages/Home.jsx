@@ -125,7 +125,7 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Machwares | Performance, Affiliate & Mobile Performance Marketing"
+        title="Machwares | Performance, Affiliate , Influencer & Mobile Performance Marketing"
         description="Machwares helps brands grow through performance marketing, affiliate partnerships, digital marketing, mobile performance marketing, and influencer marketing."
         path="/"
       />
