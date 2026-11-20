@@ -6,6 +6,7 @@ import {
   Network,
   Megaphone,
   Smartphone,
+  Users,
 } from "lucide-react";
 
 const services = [
@@ -13,8 +14,8 @@ const services = [
     number: "01",
     title: "Performance Marketing",
     description:
-      "Turn marketing investment into measurable outcomes. We focus on reaching the right audiences, driving meaningful actions, and continuously improving campaign performance.",
-    features: ["Audience Targeting", "Campaign Optimization", "Performance Tracking"],
+      "Paid campaigns managed against your cost per acquisition and return on ad spend targets.",
+    features: [],
     icon: Target,
     theme: "dark",
     link: "/services/performance-marketing",
@@ -23,8 +24,8 @@ const services = [
     number: "02",
     title: "Affiliate Marketing",
     description:
-      "Build partnerships that create mutual value. We help brands expand their reach through relevant affiliate relationships and performance-driven collaborations.",
-    features: ["Partner Acquisition", "Affiliate Campaigns", "Growth Partnerships"],
+      "Pay-for-results programs with publishers and affiliates who reach new audiences.",
+    features: [],
     icon: Network,
     theme: "light",
     link: "/services/affiliate-marketing",
@@ -33,8 +34,8 @@ const services = [
     number: "03",
     title: "Digital Marketing",
     description:
-      "Build a stronger digital presence and connect with your audience across relevant channels through thoughtful strategies and coordinated marketing initiatives.",
-    features: ["Digital Campaigns", "Audience Engagement", "Brand Visibility"],
+      "Search, social media, and content programs that build lasting online visibility.",
+    features: [],
     icon: Megaphone,
     theme: "light",
     link: "/services/digital-marketing",
@@ -43,11 +44,21 @@ const services = [
     number: "04",
     title: "Mobile Performance Marketing",
     description:
-      "Connect with mobile audiences through targeted acquisition and engagement campaigns designed to drive app installs, user actions, and measurable growth.",
-    features: ["Mobile User Acquisition", "App Campaigns", "Action-Based Growth"],
+      "App user acquisition and in-app optimization across iOS and Android.",
+    features: [],
     icon: Smartphone,
     theme: "accent",
     link: "/services/mobile-performance-marketing",
+  },
+  {
+    number: "05",
+    title: "Influencer Marketing",
+    description:
+      "Creator campaigns that put your brand in front of familiar audiences through voices they already follow.",
+    features: [],
+    icon: Users,
+    theme: "light",
+    link: "/services/influencer-marketing",
   },
 ];
 
@@ -67,8 +78,8 @@ const ServicesOverview = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="max-w-xl font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
-              The right strategy for{" "}
-              <span className="text-[var(--primary)]">every opportunity.</span>
+              Our{" "}
+              <span className="text-[var(--primary)]">Services.</span>
             </h2>
           </motion.div>
 
@@ -79,9 +90,8 @@ const ServicesOverview = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="max-w-2xl text-base leading-8 text-[var(--text)] lg:ml-auto lg:text-lg"
           >
-            Every brand has a different path to growth. Our services bring
-            together focused strategies, meaningful partnerships, and
-            performance-led execution to help you move forward.
+            Explore our services and discover how each one can help your brand
+            reach the right audience and achieve meaningful growth.
           </motion.p>
         </div>
 
@@ -105,6 +115,8 @@ const ServicesOverview = () => {
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 className={`group relative flex min-h-[390px] flex-col overflow-hidden rounded-2xl border p-7 transition-all duration-500 hover:-translate-y-1 sm:p-9 lg:min-h-[420px] ${
+                  index === 4 ? "md:col-span-2" : ""
+                } ${
                   isDark
                     ? "border-[var(--dark)] bg-[var(--dark)] text-white"
                     : isAccent
@@ -167,21 +179,6 @@ const ServicesOverview = () => {
                     {service.description}
                   </p>
 
-                  <div className="mt-7 flex flex-wrap gap-2">
-                    {service.features.map((feature) => (
-                      <span
-                        key={feature}
-                        className={`rounded-full border px-3 py-2 text-[10px] font-semibold sm:text-xs ${
-                          isDark || isAccent
-                            ? "border-white/15 bg-white/5 text-white/80"
-                            : "border-gray-200 bg-gray-50 text-[var(--text)]"
-                        }`}
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-
                   <div
                     className={`mt-8 flex items-center justify-between border-t pt-5 ${
                       isDark || isAccent
@@ -190,7 +187,7 @@ const ServicesOverview = () => {
                     }`}
                   >
                     <span className="text-sm font-bold">
-                      Explore Service
+                      Learn More
                     </span>
 
                     <span
@@ -207,6 +204,42 @@ const ServicesOverview = () => {
               </motion.a>
             );
           })}
+        </div>
+
+        {/* Better Together */}
+        <div className="mt-20 grid gap-7 rounded-2xl bg-[var(--dark)] p-8 text-white sm:p-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-16 lg:p-14">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
+              Better Together
+            </p>
+
+            <h3 className="font-[var(--font-display)] text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl lg:text-5xl">
+              One program.
+              <span className="text-[var(--primary)]">
+                {" "}Connected growth.
+              </span>
+            </h3>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="text-sm leading-8 text-white/70 sm:text-base"
+          >
+            Our services are designed to work as one program. For example, an
+            app publisher might use mobile performance campaigns to drive
+            installs, affiliate partners to add reach, influencer partnerships
+            to build trust, and digital marketing to build search and social
+            visibility. Results from each channel are reported in one place,
+            so budget decisions rest on a single set of numbers.
+          </motion.p>
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@ const benefits = [
     icon: Network,
     title: "Build valuable partnerships",
     description:
-      "Connect with relevant publishers, creators, and partners who can introduce your brand to audiences that matter.",
+      "Connect with relevant publishers, content sites, and promoters who can introduce your brand to audiences that matter.",
   },
   {
     number: "02",
@@ -51,7 +51,7 @@ const benefits = [
     icon: TrendingUp,
     title: "Focus on performance",
     description:
-      "Build campaigns around measurable actions, track partner contributions, and use insights to improve performance.",
+      "Build campaigns around measurable actions, track each partner’s contribution, and use insights to improve performance.",
   },
 ];
 
@@ -62,41 +62,44 @@ const WhatIsAffiliateMarketing = () => {
       className="relative overflow-hidden bg-[var(--secondary)] py-24 sm:py-28 lg:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+        {/* Section Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="mb-16 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end lg:gap-12"
+        >
+          <div className="max-w-xl">
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
+              Understanding Affiliate Marketing
+            </p>
 
-        
-      {/* Section Heading */}
-      <motion.div
-        initial={{ opacity: 0, y: 25 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={{
-          duration: 0.8,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className="mb-16 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end lg:gap-12"
-      >
-        <div className="max-w-xl">
-          <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
-            Understanding Affiliate Marketing
-          </p>
+            <p className="mt-7 text-base leading-8 text-[var(--text)] sm:text-lg">
+              Affiliate marketing connects brands with partners who promote
+              their products or services to relevant audiences. Through
+              performance-based partnerships, businesses can expand their
+              reach, create new opportunities, and measure the value of
+              their marketing efforts.
+            </p>
 
-          <p className="mt-7 text-base leading-8 text-[var(--text)] sm:text-lg">
-            Affiliate marketing connects brands with partners who promote
-            their products or services to relevant audiences. Through
-            performance-based partnerships, businesses can expand their
-            reach, create new opportunities, and measure the value of
-            their marketing efforts.
-          </p>
-        </div>
+            <p className="mt-4 text-base leading-8 text-[var(--text)] sm:text-lg">
+              At Machwares, we build the program, recruit and onboard
+              publishers, set up tracking, and monitor traffic quality, so
+              the conversions you pay for are conversions you want.
+            </p>
+          </div>
 
-        <h2 className="max-w-2xl font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-right lg:text-6xl">
-          Growth powered by{" "}
-          <span className="text-[var(--primary)]">
-            the right partnerships
-          </span>
-        </h2>
-      </motion.div>
-
+          <h2 className="max-w-2xl font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-right lg:text-6xl">
+            Growth powered by{" "}
+            <span className="text-[var(--primary)]">
+              the right partnerships
+            </span>
+          </h2>
+        </motion.div>
 
         {/* Benefit Cards */}
         <motion.div
@@ -142,38 +145,6 @@ const WhatIsAffiliateMarketing = () => {
             );
           })}
         </motion.div>
-
-        {/* Closing Statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.15,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="mt-8 flex flex-col gap-6 rounded-2xl bg-[var(--dark)] p-8 sm:p-10 lg:flex-row lg:items-center lg:justify-between lg:p-12"
-        >
-          <div className="max-w-2xl">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-red-400">
-              The Machwares Approach
-            </p>
-
-            <h3 className="font-[var(--font-display)] text-2xl font-semibold leading-snug tracking-tight text-white sm:text-3xl">
-              Stronger partnerships. Wider reach.{" "}
-              <span className="text-red-400">
-                Meaningful growth.
-              </span>
-            </h3>
-          </div>
-
-          <p className="max-w-sm text-sm leading-7 text-gray-400 lg:text-base">
-            We focus on creating relevant connections that bring brands
-            and partners together around shared opportunities.
-          </p>
-        </motion.div>
-
       </div>
     </section>
   );

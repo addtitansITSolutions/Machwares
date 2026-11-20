@@ -11,15 +11,13 @@ const AboutHero = () => {
         {/* Left Content */}
         <div className="relative z-10">
           <h1 className="max-w-[850px] font-[var(--font-display)] text-[clamp(3.2rem,6.5vw,6.5rem)] font-semibold leading-[0.98] tracking-[-0.065em] text-[var(--dark)]">
-            Growth begins with{" "}
-            <span className="text-[var(--primary)]">the right</span>{" "}
-            connections.
+             Five verticals{" "}
+            <span className="text-[var(--primary)]">One standard</span>{" "}
+            measurable results.
           </h1>
 
           <p className="mt-8 max-w-[590px] text-base leading-8 text-[var(--text)] sm:text-lg">
-            We bring brands, audiences, and opportunities closer through
-            thoughtful marketing strategies, performance-driven campaigns,
-            and partnerships built around meaningful growth.
+           Machwares helps brands acquire customers, grow mobile app users, and build a stronger online presence through performance marketing, affiliate marketing, digital marketing, mobile performance marketing, and influencer marketing.
           </p>
 
           <div className="mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center sm:gap-5">

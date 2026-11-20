@@ -47,18 +47,13 @@ const DigitalMarketingHero = () => {
             </div>
 
             <h1 className="max-w-2xl font-[var(--font-display)] text-4xl font-semibold leading-[1.15] tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
-              Build your digital presence.{" "}
-              <span className="text-[var(--primary)]">
-                Grow your influence.
-              </span>
+              A stronger presence wherever your customers search and scroll.
             </h1>
 
             <p className="mt-7 max-w-xl text-base leading-8 text-[var(--text)] sm:text-lg">
-              Make your brand more visible, relevant, and connected.
-              We bring together strategic digital marketing initiatives
-              to help businesses reach the right audiences, strengthen
-              their online presence, and create meaningful growth
-              opportunities.
+              Machwares builds search visibility, social media presence,
+              and content programs that help customers across the country
+              find, trust, and choose your brand.
             </p>
 
             {/* CTA Buttons */}

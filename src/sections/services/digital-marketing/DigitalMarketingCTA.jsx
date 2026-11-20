@@ -29,7 +29,6 @@ const DigitalMarketingCTA = () => {
       <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-[var(--primary)] opacity-[0.12] blur-[130px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
         {/* Main CTA */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -46,9 +45,9 @@ const DigitalMarketingCTA = () => {
           </p>
 
           <h2 className="max-w-4xl font-[var(--font-display)] text-4xl font-semibold leading-[1.15] tracking-[-0.045em] text-white sm:text-5xl lg:text-7xl">
-            Ready to make your brand{" "}
+            Strengthen Your{" "}
             <span className="text-red-400">
-              stand out?
+              Online Presence
             </span>
           </h2>
 
@@ -108,7 +107,6 @@ const DigitalMarketingCTA = () => {
             })}
           </div>
         </motion.div>
-
       </div>
     </section>
   );

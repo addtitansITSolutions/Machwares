@@ -44,14 +44,14 @@ const capabilities = [
     icon: Users,
     title: "Acquire relevant users",
     description:
-      "Focus your campaigns on attracting users who align with your business goals, whether the objective is app installs, registrations, enquiries, or other valuable actions.",
+      "Focus your campaigns on attracting users who align with your business goals, whether the objective is app installs, registrations, inquiries, or other valuable actions.",
   },
   {
     number: "03",
     icon: TrendingUp,
     title: "Optimize for better outcomes",
     description:
-      "Evaluate campaign performance through meaningful metrics, understand user acquisition trends, and refine your approach using data-led insights.",
+      "Evaluate performance through metrics such as cost per install, cost per action, retention, and return on ad spend, and refine your approach using data-led insights.",
   },
 ];
 
@@ -62,42 +62,47 @@ const WhatIsMobilePerformanceMarketing = () => {
       className="relative overflow-hidden bg-[var(--secondary)] py-24 sm:py-28 lg:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
-
-        
         {/* Section Heading */}
         <motion.div
-        initial={{ opacity: 0, y: 25 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={{
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{
             duration: 0.8,
             ease: [0.22, 1, 0.36, 1],
-        }}
-        className="mb-16 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end lg:gap-12"
+          }}
+          className="mb-16 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end lg:gap-12"
         >
-        <div className="max-w-xl">
+          <div className="max-w-xl">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
-            Understanding Mobile Performance Marketing
+              Understanding Mobile Performance Marketing
             </p>
 
             <p className="mt-7 text-base leading-8 text-[var(--text)] sm:text-lg">
-            Mobile performance marketing focuses on reaching and
-            acquiring users through targeted mobile campaigns. It
-            combines audience insights, focused advertising, and
-            performance measurement to help businesses attract relevant
-            users and work towards clearly defined campaign objectives.
+              Mobile performance marketing focuses on reaching and acquiring
+              users through targeted mobile campaigns. It combines audience
+              insights, focused advertising, and performance measurement to
+              help businesses attract relevant users and work toward clearly
+              defined campaign objectives.
             </p>
-        </div>
 
-        <h2 className="max-w-2xl font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-right lg:text-6xl">
+            <p className="mt-5 text-base leading-8 text-[var(--text)] sm:text-lg">
+              At Machwares, we set up attribution and in-app event tracking
+              before spend begins, test creative across ad formats, and monitor
+              traffic quality, so you pay for users who are real and who
+              engage. Measurement is planned around platform privacy
+              requirements, including Apple’s App Tracking Transparency
+              framework.
+            </p>
+          </div>
+
+          <h2 className="max-w-2xl font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-right lg:text-6xl">
             Turn mobile reach into{" "}
             <span className="text-[var(--primary)]">
-            meaningful action.
+              meaningful action.
             </span>
-        </h2>
+          </h2>
         </motion.div>
-
 
         {/* Capability Cards */}
         <motion.div
@@ -170,12 +175,10 @@ const WhatIsMobilePerformanceMarketing = () => {
           </div>
 
           <p className="max-w-sm text-sm leading-7 text-gray-400 lg:text-base">
-            We bring audience targeting and performance-led campaign
-            thinking together to help brands make their mobile marketing
-            efforts count.
+            We bring audience targeting and performance-led campaign thinking
+            together to help brands make their mobile marketing efforts count.
           </p>
         </motion.div>
-
       </div>
     </section>
   );

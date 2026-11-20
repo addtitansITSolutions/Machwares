@@ -46,18 +46,18 @@ const MobilePerformanceMarketingHero = () => {
             </div>
 
             <h1 className="max-w-2xl font-[var(--font-display)] text-4xl font-semibold leading-[1.15] tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
-              Reach mobile audiences.{" "}
+              Grow your app with{" "}
               <span className="text-[var(--primary)]">
-                Drive meaningful action.
+                users who take action.
               </span>
             </h1>
 
             <p className="mt-7 max-w-xl text-base leading-8 text-[var(--text)] sm:text-lg">
-              Connect your brand with mobile-first audiences through
-              focused advertising and user acquisition campaigns.
-              We help businesses reach relevant users, encourage
-              valuable actions, and optimize mobile campaigns around
-              measurable outcomes.
+              Connect your brand with mobile-first audiences through focused
+              advertising and user acquisition campaigns. We help businesses
+              reach relevant users on iOS and Android, encourage valuable
+              in-app actions, and optimize campaigns around measurable
+              outcomes.
             </p>
 
             {/* CTA Buttons */}
@@ -77,7 +77,7 @@ const MobilePerformanceMarketingHero = () => {
                 href="mailto:admin@machwares.com?subject=Mobile%20Performance%20Marketing%20Inquiry"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--border)] px-6 py-4 text-sm font-bold text-[var(--dark)] transition-all duration-300 hover:border-[var(--primary)] hover:text-[var(--primary)]"
               >
-                Let's Talk
+                Let’s Talk
                 <ArrowUpRight size={18} />
               </a>
             </div>

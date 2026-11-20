@@ -11,8 +11,8 @@ const Services = () => {
   return (
     <>
       <SEO
-        title="Our Services | Machwares"
-        description="Explore Machwares services, including performance marketing, affiliate marketing, digital marketing, and mobile performance marketing."
+        title="Marketing Services | Machwares"
+        description="Explore our five distinct verticals: performance marketing, affiliate marketing, digital marketing, mobile performance marketing, and influencer marketing for brands serving targeted audiences."
         path="/services"
       />
 

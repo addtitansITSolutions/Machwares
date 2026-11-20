@@ -29,7 +29,6 @@ const AffiliateMarketingCTA = () => {
       <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-[var(--primary)] opacity-[0.12] blur-[130px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
         {/* Main CTA */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -42,7 +41,7 @@ const AffiliateMarketingCTA = () => {
           className="w-full"
         >
           <p className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-red-400">
-            Let's Build Something Together
+            Let’s Build Something Together
           </p>
 
           <h2 className="max-w-4xl font-[var(--font-display)] text-4xl font-semibold leading-[1.15] tracking-[-0.045em] text-white sm:text-5xl lg:text-7xl">
@@ -56,7 +55,7 @@ const AffiliateMarketingCTA = () => {
           {/* Description + CTA Button */}
           <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end">
             <p className="max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
-              Let's explore how the right affiliate partnerships can help
+              Let’s explore how the right affiliate partnerships can help
               your brand reach new audiences, create valuable connections,
               and unlock opportunities for meaningful growth.
             </p>
@@ -108,7 +107,6 @@ const AffiliateMarketingCTA = () => {
             })}
           </div>
         </motion.div>
-
       </div>
     </section>
   );

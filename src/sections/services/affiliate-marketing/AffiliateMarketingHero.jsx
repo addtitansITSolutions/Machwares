@@ -54,10 +54,9 @@ const AffiliateMarketingHero = () => {
 
             <p className="mt-7 max-w-xl text-base leading-8 text-[var(--text)] sm:text-lg sm:leading-9">
               Turn valuable partnerships into meaningful business
-              opportunities. We help brands connect with relevant
-              affiliate partners, expand their reach, and build
-              performance-focused partnerships that support
-              sustainable growth.
+              opportunities. Machwares designs and manages affiliate
+              programs that connect your brand with relevant publishers,
+              expand your reach, and pay partners only for approved results.
             </p>
 
             <div className="mt-9 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
@@ -73,7 +72,7 @@ const AffiliateMarketingHero = () => {
                 href="mailto:admin@machwares.com?subject=Affiliate%20Marketing%20Inquiry"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-transparent px-7 py-4 text-sm font-bold text-[var(--dark)] transition-all duration-300 hover:border-[var(--primary)] hover:text-[var(--primary)] sm:w-auto"
               >
-                Let's Talk
+                Let’s Talk
                 <ArrowUpRight size={18} />
               </a>
             </div>

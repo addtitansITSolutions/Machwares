@@ -9,33 +9,33 @@ import {
 const impactAreas = [
   {
     number: "01",
-    title: "Relevant Reach",
+    title: "Discover & Understand",
     description:
-      "Connecting brands with audiences that align with their goals, interests, and market opportunities.",
+      "We learn your business, your customers, and your goals.",
     icon: Target,
     visual: "reach",
   },
   {
     number: "02",
-    title: "Meaningful Relationships",
+    title: "Strategize & Plan",
     description:
-      "Creating valuable connections between brands, partners, and people through collaboration.",
+      "We select channels, define targets, and build a campaign roadmap.",
     icon: Network,
     visual: "connections",
   },
   {
     number: "03",
-    title: "Measurable Progress",
+    title: "Execute & Activate",
     description:
-      "Keeping business objectives at the centre and using meaningful insights to understand progress.",
+      "We launch campaigns and programs with tracking in place from day one.",
     icon: BarChart3,
     visual: "progress",
   },
   {
     number: "04",
-    title: "Continuous Improvement",
+    title: "Measure & Optimize",
     description:
-      "Learning from performance, adapting to change, and finding better ways to move forward.",
+      "We review results regularly and shift budget toward what performs.",
     icon: RefreshCw,
     visual: "improvement",
   },
@@ -114,37 +114,31 @@ const HowWeCreateImpact = () => {
   return (
     <section className="bg-[var(--light)] px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28" id="how-we-create-impact">
       <div className="mx-auto max-w-7xl">
-        
+        {/* Section Heading */}
+        <div className="mb-14 w-full">
+          <div className="flex w-full flex-col justify-between gap-8 lg:flex-row lg:items-end lg:gap-12">
+            {/* Left Content */}
+            <div className="w-full lg:w-[42%]">
+              <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
+                How We Work
+              </p>
 
-{/* Section Heading */}
-<div className="mb-14 w-full">
-  <div className="flex w-full flex-col justify-between gap-8 lg:flex-row lg:items-end lg:gap-12">
+              <p className="text-base leading-8 text-[var(--text)]">
+                We learn your business, select the right channels, launch
+                campaigns with tracking in place, and continually optimize
+                based on real performance.
+              </p>
+            </div>
 
-    {/* Left Content */}
-    <div className="w-full lg:w-[42%]">
-      <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
-        How We Create Impact
-      </p>
-
-      <p className="text-base leading-8 text-[var(--text)]">
-        We believe effective marketing is about more than visibility.
-        It's about creating connections that lead to valuable
-        opportunities and meaningful progress.
-      </p>
-    </div>
-
-    {/* Right Heading */}
-    <h2 className="w-full font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:w-[58%] lg:text-right lg:text-6xl">
-      Turning the right connections into{" "}
-      <span className="text-[var(--primary)]">
-        real opportunities.
-      </span>
-    </h2>
-
-  </div>
-</div>
-
-
+            {/* Right Heading */}
+            <h2 className="w-full font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:w-[58%] lg:text-right lg:text-6xl">
+              A clear process.{" "}
+              <span className="text-[var(--primary)]">
+                Measurable progress.
+              </span>
+            </h2>
+          </div>
+        </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {impactAreas.map((item) => {

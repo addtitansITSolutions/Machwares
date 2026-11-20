@@ -13,8 +13,8 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About Machwares | Digital Marketing & Growth Agency"
-        description="Discover Machwares, a digital marketing and growth agency helping brands connect with the right audiences through performance marketing, affiliate partnerships, and strategic digital campaigns."
+        title="About Machwares | Performance, Affiliate, Digital and Influencer Marketing"
+        description="Machwares is a marketing company built around five verticals: performance marketing, affiliate marketing, digital marketing, mobile performance marketing, and influencer marketing."
         path="/about"
       />
 

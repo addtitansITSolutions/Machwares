@@ -19,6 +19,24 @@ const services = [
     name: "Mobile Performance Marketing",
     path: "/services/mobile-performance-marketing",
   },
+  {
+    name: "Influencer Marketing",
+    path: "/services/influencer-marketing",
+  },
+];
+
+const quickLinks = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "All Services", path: "/services" },
+  { name: "Contact", path: "/contact" },
+];
+
+const legalPages = [
+  { name: "Privacy Policy", path: "/privacy-policy" },
+  { name: "Terms & Conditions", path: "/terms-and-conditions" },
+  { name: "GDPR Compliance", path: "/gdpr-compliance" },
+  { name: "Copyright & DMCA", path: "/copyright-and-dmca" },
 ];
 
 const Footer = () => {
@@ -26,7 +44,7 @@ const Footer = () => {
     <footer className="bg-[var(--dark)] text-white">
       {/* Main Footer */}
       <div className="mx-auto max-w-[1440px] px-6 py-14 sm:px-10 lg:px-12">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-10">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] lg:gap-10">
 
           {/* Brand */}
           <div>
@@ -81,41 +99,36 @@ const Footer = () => {
             </h3>
 
             <ul className="mt-6 space-y-4">
-              <li>
-                <Link
-                  to="/"
-                  className="font-[var(--font-body)] text-sm text-white/55 transition-colors duration-300 hover:text-[var(--primary)]"
-                >
-                  Home
-                </Link>
-              </li>
+              {quickLinks.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="font-[var(--font-body)] text-sm text-white/55 transition-colors duration-300 hover:text-[var(--primary)]"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <li>
-                <Link
-                  to="/about"
-                  className="font-[var(--font-body)] text-sm text-white/55 transition-colors duration-300 hover:text-[var(--primary)]"
-                >
-                  About Us
-                </Link>
-              </li>
+          {/* Legal */}
+          <div>
+            <h3 className="font-[var(--font-display)] text-sm font-bold">
+              Legal
+            </h3>
 
-              <li>
-                <Link
-                  to="/services"
-                  className="font-[var(--font-body)] text-sm text-white/55 transition-colors duration-300 hover:text-[var(--primary)]"
-                >
-                  All Services
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/contact"
-                  className="font-[var(--font-body)] text-sm text-white/55 transition-colors duration-300 hover:text-[var(--primary)]"
-                >
-                  Contact
-                </Link>
-              </li>
+            <ul className="mt-6 space-y-4">
+              {legalPages.map((page) => (
+                <li key={page.path}>
+                  <Link
+                    to={page.path}
+                    className="font-[var(--font-body)] text-sm text-white/55 transition-colors duration-300 hover:text-[var(--primary)]"
+                  >
+                    {page.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

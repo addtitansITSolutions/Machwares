@@ -5,7 +5,6 @@ import { ArrowUpRight, Target, TrendingUp } from "lucide-react";
 const PerformanceMarketingCTA = () => {
   return (
     <section className="relative overflow-hidden bg-[var(--dark)] px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-36">
-
       {/* Background decoration */}
       <motion.div
         animate={{
@@ -23,7 +22,6 @@ const PerformanceMarketingCTA = () => {
       <div className="pointer-events-none absolute -bottom-40 -left-40 h-[450px] w-[450px] rounded-full bg-red-900/30 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl">
-
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,26 +32,23 @@ const PerformanceMarketingCTA = () => {
           }}
           className="grid items-end gap-12 lg:grid-cols-[1fr_auto]"
         >
-
           {/* Main Content */}
           <div>
             <div className="mb-8 flex items-center gap-3">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-red-400">
-                Let's Move Forward
+                Let’s Move Forward
               </span>
             </div>
 
             <h2 className="max-w-4xl font-[var(--font-display)] text-4xl font-semibold leading-[1.12] tracking-[-0.05em] text-white sm:text-5xl lg:text-7xl">
               Ready to make your marketing{" "}
-              <span className="text-red-400">
-                work harder?
-              </span>
+              <span className="text-red-400">work harder?</span>
             </h2>
 
             <p className="mt-7 max-w-2xl text-base leading-8 text-white/65 sm:text-lg sm:leading-9">
-              Let's talk about your goals, understand your audience,
-              and explore how a focused performance marketing strategy
-              can help your brand move forward.
+              Let’s talk about your goals, understand your audience, and explore
+              how a focused performance marketing strategy can help your brand
+              move forward.
             </p>
           </div>
 
@@ -67,7 +62,6 @@ const PerformanceMarketingCTA = () => {
             Discuss Your Goals
             <ArrowUpRight size={19} />
           </motion.a>
-
         </motion.div>
 
         {/* Bottom Divider */}
@@ -105,7 +99,6 @@ const PerformanceMarketingCTA = () => {
             Machwares · Performance Marketing
           </p>
         </motion.div>
-
       </div>
     </section>
   );

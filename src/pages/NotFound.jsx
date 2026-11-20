@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,19 +11,21 @@ const NotFound = () => {
   return (
     <>
       <SEO
-        title="Page Not Found"
-        description="The page you're looking for could not be found on the Go Purple Nut website."
+        title="Page Not Found | Machwares"
+        description="The page you're looking for could not be found on the Machwares website."
         path="/404"
         noIndex
       />
-      <Navbar forceScrolled/> 
-      <main className="min-h-screen bg-[#100C1C] text-white">
+
+      <Navbar forceScrolled />
+
+      <main className="min-h-screen bg-[var(--dark)] text-white">
         {/* Main 404 */}
         <section className="relative flex min-h-screen items-center overflow-hidden">
           {/* Background accents */}
           <div className="pointer-events-none absolute left-[-10%] top-[15%] h-[420px] w-[420px] rounded-full bg-[var(--primary)]/10 blur-[120px]" />
 
-          <div className="pointer-events-none absolute bottom-[-15%] right-[-5%] h-[500px] w-[500px] rounded-full bg-[var(--secondary)]/10 blur-[140px]" />
+          <div className="pointer-events-none absolute bottom-[-15%] right-[-5%] h-[500px] w-[500px] rounded-full bg-white/5 blur-[140px]" />
 
           <div className="relative mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-10 lg:px-16">
             <div className="grid items-center gap-14 lg:grid-cols-[1fr_0.7fr]">
@@ -88,7 +91,6 @@ const NotFound = () => {
                 >
                   <Link
                     to="/"
-                    style={{color : "black"}}
                     className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-6 py-3.5 font-[var(--font-body)] text-sm font-semibold text-[var(--dark)] transition-all duration-300 hover:bg-[var(--primary)] hover:text-white sm:w-auto"
                   >
                     <Home size={16} />
@@ -135,7 +137,7 @@ const NotFound = () => {
                     <div className="absolute left-0 top-1/2 h-px w-full bg-white" />
                   </div>
 
-                  {/* Purple circle */}
+                  {/* Primary circle */}
                   <motion.div
                     animate={{
                       scale: [1, 1.08, 1],
@@ -165,7 +167,7 @@ const NotFound = () => {
                   </span>
 
                   {/* Accent */}
-                  <div className="absolute right-0 top-1/2 h-24 w-1 -translate-y-1/2 bg-[var(--secondary)]" />
+                  <div className="absolute right-0 top-1/2 h-24 w-1 -translate-y-1/2 bg-white/70" />
                 </div>
               </motion.div>
             </div>
@@ -178,16 +180,17 @@ const NotFound = () => {
               className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between"
             >
               <p className="font-[var(--font-body)] text-xs uppercase tracking-[0.16em] text-white/35">
-                Go Purple Nut
+                Machwares
               </p>
 
               <p className="font-[var(--font-body)] text-xs text-white/35">
-                Strategy × Creativity × Growth
+                Strategy × Performance × Growth
               </p>
             </motion.div>
           </div>
         </section>
       </main>
+
       <Footer />
     </>
   );

@@ -74,6 +74,15 @@ import ScrollToTop from "./components/ScrollToTop";
 import PageTransition from "./components/PageTransition";
 import PageTransition2 from "./components/PageTransition2";
 import MobilePerformanceMarketing from "./pages/services/MobilePerformanceMarketing";
+import InfluencerMarketing from "./pages/services/InfluencerMarketing";
+
+import TermsAndConditions from './pages/TermsAndConditions'
+import CopyrightAndDMCA from './pages/CopyrightAndDMCA'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import GDPRCompliance from './pages/GDPRCompliance'
+
+import NotFound from './pages/NotFound'
+
 
 const App = () => {
   return (
@@ -90,8 +99,15 @@ const App = () => {
         <Route path='/services/affiliate-marketing' element={<AffiliateMarketing />} />
         <Route path='/services/digital-marketing' element={<DigitalMarketing />} />
         <Route path='/services/mobile-performance-marketing' element={<MobilePerformanceMarketing />} />
-        <Route path="*" element={<UnderDevelopment />} />
+        <Route path="/services/influencer-marketing" element={<InfluencerMarketing />} />
+        <Route path='/copyright-and-dmca' element={<CopyrightAndDMCA />} />
+        <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
+        <Route path="/gdpr-compliance" element={<GDPRCompliance />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        
         <Route path='/about' element={<About />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Toaster position="top-right" reverseOrder={false} />

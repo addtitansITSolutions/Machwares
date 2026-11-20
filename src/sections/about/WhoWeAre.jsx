@@ -3,21 +3,33 @@ const WhoWeAre = () => {
   const focusAreas = [
     {
       number: "01",
-      title: "Understanding Audiences",
+      title: "Performance Marketing",
       description:
-        "We focus on understanding people, their interests, and what influences their decisions.",
+        "Paid campaigns managed against your cost per acquisition and return on ad spend targets.",
     },
     {
       number: "02",
-      title: "Creating Connections",
+      title: "Affiliate Marketing",
       description:
-        "We bring brands and audiences together through relevant campaigns and meaningful partnerships.",
+        "Performance-based publisher and affiliate programs that extend your reach among audiences.",
     },
     {
       number: "03",
-      title: "Driving Growth",
+      title: "Digital Marketing",
       description:
-        "We focus on strategies that support measurable outcomes and long-term business growth.",
+        "Search, social media, and content programs that strengthen your online presence.",
+    },
+    {
+      number: "04",
+      title: "Mobile Performance Marketing",
+      description:
+        "User acquisition and in-app optimization for iOS and Android apps.",
+    },
+    {
+      number: "05",
+      title: "Influencer Marketing",
+      description:
+        "Creator campaigns that connect your brand with audiences through voices they trust.",
     },
   ];
 
@@ -30,31 +42,30 @@ const WhoWeAre = () => {
         {/* Left Column */}
         <div>
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
-            Who We Are
+            Who Are We
           </p>
 
-          <h2 className="max-w-xl font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
-            We believe growth starts with{" "}
-            <span className="text-[var(--primary)]">connection.</span>
+          <h2 className="max-w-xl font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-3xl lg:text-5xl">
+            Each of our connected verticals follow the same discipline: define
+            the audience, set a measurable goal, launch, and optimize against
+            real data.
           </h2>
 
           <p className="mt-7 max-w-lg text-base leading-8 text-[var(--text)]">
-            Machwares is a digital marketing and growth agency focused on
-            helping brands connect with the audiences that matter. We bring
-            together strategic thinking, performance-driven marketing, and
-            valuable partnerships to create opportunities for meaningful
-            business growth.
-          </p>
-
-          <p className="mt-5 max-w-lg text-base leading-8 text-[var(--text)]">
-            From reaching the right people to building stronger digital
-            relationships, our approach is centred on understanding goals,
-            choosing the right channels, and making every connection count.
+            We work with brands that expect accountability from their marketing
+            partner. The goal may be a lower cost per acquisition, more
+            high-quality app installs, a stronger affiliate program, or greater
+            visibility. In every case, we report on outcomes that affect your
+            business, not on activity alone.
           </p>
         </div>
 
         {/* Right Column */}
         <div className="border-t border-[var(--border)]">
+          <h3 className="border-b border-[var(--border)] py-6 font-[var(--font-display)] text-2xl font-semibold text-[var(--dark)] sm:text-3xl">
+            What We Do
+          </h3>
+
           {focusAreas.map((item) => (
             <div
               key={item.number}

@@ -1,419 +1,482 @@
-import { motion } from "framer-motion";
-import { ArrowLeft, ArrowUpRight, LockKeyhole } from "lucide-react";
+
 import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 
-const sections = [
-  {
-    title: "GDPR Compliance",
-    content: (
-      <>
-        <p>
-          Go Purple Nut works with clients, partners, and affiliates across
-          the country and, in some cases, around the world. The European Union
-          is not our primary market, but whenever we handle data of someone
-          based in the EU or UK, we hold ourselves to the standard set by the
-          General Data Protection Regulation (GDPR). This page explains what
-          that means in practice.
-        </p>
-
-        <p className="mt-4">
-          If you are an EU or UK resident, the GDPR gives you real,
-          enforceable control over your personal data. We collect only what we
-          need, explain why we are collecting it, and give you a clear way to
-          access, correct, or delete it whenever you ask.
-        </p>
-      </>
-    ),
-  },
-
-  {
-    title: "Two Roles We Play",
-    content: (
-      <>
-        <p>
-          Because of how performance marketing works, we handle data in two
-          different capacities.
-        </p>
-
-        <h3 className="mt-6 font-semibold text-black">
-          Direct Interaction with Visitors
-        </h3>
-
-        <p className="mt-3">
-          When someone fills out a form on our website, we decide how that data
-          will be utilized. Under the GDPR, this makes us the controller.
-        </p>
-
-        <h3 className="mt-6 font-semibold text-black">
-          Running A Campaign for A Client
-        </h3>
-
-        <p className="mt-3">
-          For any campaign that touches a client&apos;s personal data, we act
-          on that client&apos;s instructions. Under the GDPR, this makes us the
-          processor, and a signed data processing agreement governs exactly
-          what we can and cannot do with that data.
-        </p>
-
-        <p className="mt-4">
-          If you are a client and need a data processing agreement in place,
-          reach out to (email), and we will prepare one.
-        </p>
-      </>
-    ),
-  },
-
-  {
-    title: "Data We Collect And Why",
-    content: (
-      <>
-        <p>
-          Depending on how you interact with us, this may include your name,
-          email address, phone number, and company details. If you are engaging
-          with us as an affiliate or campaign partner, we also collect click,
-          conversion, and commission data to evaluate performance.
-        </p>
-
-        <p className="mt-4">
-          We only process this information on one of the following grounds, as
-          the GDPR requires:
-        </p>
-
-        <ul className="mt-4 list-disc space-y-2 pl-5">
-          <li>You have given us consent.</li>
-          <li>It is necessary to deliver a service you have asked for</li>
-          <li>
-            We have a legitimate business reason, such as measuring a campaign
-            or preventing fraud, that does not override your own rights.
-          </li>
-          <li>We are legally required to</li>
-        </ul>
-      </>
-    ),
-  },
-
-  {
-    title: "Your Rights, Plainly Stated",
-    content: (
-      <>
-        <p>
-          As an EU or UK resident, you can ask us to:
-        </p>
-
-        <div className="mt-6 overflow-x-auto rounded-2xl border border-black/10">
-          <table className="w-full min-w-[600px] border-collapse text-left">
-            <thead>
-              <tr className="border-b border-black/10 bg-black/[0.025]">
-                <th className="px-5 py-4 font-[var(--font-display)] text-sm font-semibold text-black">
-                  Right
-                </th>
-                <th className="px-5 py-4 font-[var(--font-display)] text-sm font-semibold text-black">
-                  What It Means
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr className="border-b border-black/10">
-                <td className="px-5 py-4 font-semibold text-black">Access</td>
-                <td className="px-5 py-4">
-                  Show me what data you hold on me
-                </td>
-              </tr>
-
-              <tr className="border-b border-black/10">
-                <td className="px-5 py-4 font-semibold text-black">Correct</td>
-                <td className="px-5 py-4">
-                  Fix something that is wrong
-                </td>
-              </tr>
-
-              <tr className="border-b border-black/10">
-                <td className="px-5 py-4 font-semibold text-black">Delete</td>
-                <td className="px-5 py-4">
-                  Remove my data, where there is no legal reason to keep it
-                </td>
-              </tr>
-
-              <tr className="border-b border-black/10">
-                <td className="px-5 py-4 font-semibold text-black">
-                  Restrict
-                </td>
-                <td className="px-5 py-4">
-                  Pause how you are using my data
-                </td>
-              </tr>
-
-              <tr className="border-b border-black/10">
-                <td className="px-5 py-4 font-semibold text-black">Object</td>
-                <td className="px-5 py-4">
-                  Stop using my data for a specific purpose
-                </td>
-              </tr>
-
-              <tr className="border-b border-black/10">
-                <td className="px-5 py-4 font-semibold text-black">
-                  Transfer
-                </td>
-                <td className="px-5 py-4">
-                  Give me my data in a format I can take elsewhere
-                </td>
-              </tr>
-
-              <tr>
-                <td className="px-5 py-4 font-semibold text-black">
-                  Withdraw Consent
-                </td>
-                <td className="px-5 py-4">
-                  Undo an earlier opt-in at any time
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p className="mt-6">
-          We respond to any of these requests within one month, as required by
-          law. Send requests to (email). Feel free to raise a concern directly
-          with your national data protection authority.
-        </p>
-      </>
-    ),
-  },
-
-  {
-    title: "Moving Data Across Borders",
-    content: (
-      <p>
-        Serving clients in multiple countries means data from the EU or UK is
-        often processed outside those regions. When that happens, we rely on
-        recognized safeguards, primarily the European Commission&apos;s
-        Standard Contractual Clauses, to keep protection levels consistent.
-      </p>
-    ),
-  },
-
-  {
-    title: "If Something Goes Wrong",
-    content: (
-      <p>
-        In the event of a data breach, we notify the relevant supervisory
-        authority within 72 hours of identifying it, and we inform affected
-        individuals as required by law.
-      </p>
-    ),
-  },
-
-  {
-    title: "A Note on Younger Users",
-    content: (
-      <p>
-        Our services are not built for anyone under the age of 16, and we do
-        not knowingly collect data from users below that age. If we learn that
-        we have done so, we will delete it promptly.
-      </p>
-    ),
-  },
-];
-
 const GDPRCompliance = () => {
+  const sections = [
+    {
+      title: "Our Commitment",
+      content: (
+        <p>
+          Machwares serves brands that market to audiences in the United
+          States. When we offer services to, or monitor the behavior of,
+          individuals located in the European Union (EU) or European Economic
+          Area (EEA), the EU General Data Protection Regulation (GDPR) applies,
+          and we handle their personal data in line with it. This page explains
+          how.
+        </p>
+      ),
+    },
+    {
+      title: "When the GDPR Applies",
+      content: (
+        <p>
+          The GDPR applies to organizations established outside the EU that
+          offer goods or services, paid or free, to individuals in the EU, or
+          that monitor the behavior of individuals in the EU. It protects
+          individuals and does not apply to data about companies or other legal
+          entities. Our services are directed to the U.S. market. This page
+          applies wherever the GDPR covers our processing, for example when we
+          process the personal data of an individual located in the EU or EEA.
+        </p>
+      ),
+    },
+    {
+      title: "What Counts as Personal Data",
+      content: (
+        <p>
+          Personal data is any information relating to an identified or
+          identifiable individual. Under the GDPR, this includes names, email
+          addresses, IP addresses, cookie IDs, location data, and mobile
+          advertising identifiers. Data that has been pseudonymized but can
+          still be used to re-identify a person remains personal data. Data
+          that is irreversibly anonymized is no longer personal data.
+        </p>
+      ),
+    },
+    {
+      title: "Our Role",
+      content: (
+        <ul className="list-disc space-y-3 pl-5">
+          <li>
+            <strong className="text-black">Controller:</strong> For personal
+            data collected through our Website, contact inquiries, creator and
+            publisher relationships, and our own marketing, Machwares decides
+            why and how the data is processed, so we act as the controller.
+          </li>
+          <li>
+            <strong className="text-black">Processor:</strong> For personal
+            data we handle in client campaigns, we act as a processor. We
+            process that data only on behalf of the client, who is the
+            controller, and under a written agreement. We do not engage another
+            processor without the client’s prior written authorization, and
+            any such processor must meet the same data protection obligations.
+          </li>
+        </ul>
+      ),
+    },
+    {
+      title: "Principles We Follow",
+      content: (
+        <>
+          <p>We process personal data in accordance with Article 5 of the GDPR:</p>
+          <ul className="mt-4 list-disc space-y-3 pl-5">
+            <li>
+              <strong className="text-black">
+                Lawfulness, fairness, and transparency:
+              </strong>{" "}
+              We process data lawfully and explain how we use it.
+            </li>
+            <li>
+              <strong className="text-black">Purpose limitation:</strong> We
+              collect data for specified purposes and do not use it in
+              incompatible ways.
+            </li>
+            <li>
+              <strong className="text-black">Data minimization:</strong> We
+              collect only what is necessary.
+            </li>
+            <li>
+              <strong className="text-black">Accuracy:</strong> We keep data
+              accurate and correct it when needed.
+            </li>
+            <li>
+              <strong className="text-black">Storage limitation:</strong> We
+              keep data only as long as necessary.
+            </li>
+            <li>
+              <strong className="text-black">
+                Integrity and confidentiality:
+              </strong>{" "}
+              We protect data with appropriate security measures.
+            </li>
+            <li>
+              <strong className="text-black">Accountability:</strong> We can
+              demonstrate our compliance with these principles.
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      title: "Legal Bases for Processing",
+      content: (
+        <>
+          <p>
+            We process personal data of individuals in the EU and EEA only
+            where a legal basis under Article 6 of the GDPR applies:
+          </p>
+          <ul className="mt-4 list-disc space-y-3 pl-5">
+            <li>
+              <strong className="text-black">Consent:</strong> For example, for
+              non-essential cookies and marketing emails. You may withdraw
+              consent at any time.
+            </li>
+            <li>
+              <strong className="text-black">Contract:</strong> When we respond
+              to your request about our services or take steps before entering
+              into an agreement.
+            </li>
+            <li>
+              <strong className="text-black">Legitimate interests:</strong>{" "}
+              Such as operating and securing the Website and communicating
+              with business contacts, balanced against your rights. You may
+              object to this processing.
+            </li>
+            <li>
+              <strong className="text-black">Legal obligation:</strong> When
+              the law requires us to process data.
+            </li>
+          </ul>
+          <p className="mt-4">
+            Direct marketing emails and non-essential cookies are also subject
+            to the ePrivacy Directive, and we comply with its requirements.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Your Rights",
+      content: (
+        <>
+          <p>If the GDPR applies to you, you have the right to:</p>
+          <ul className="mt-4 list-disc space-y-3 pl-5">
+            <li>
+              <strong className="text-black">Access</strong> your personal
+              data, including confirmation of whether we process it, a copy,
+              and information about the purposes, categories, and recipients.
+            </li>
+            <li>
+              <strong className="text-black">Rectify</strong> inaccurate or
+              incomplete personal data.
+            </li>
+            <li>
+              <strong className="text-black">Erase</strong> your personal data
+              without undue delay in certain cases, such as when it is no
+              longer needed for its original purpose or you withdraw consent.
+              Exceptions apply, for example where we must keep data to comply
+              with the law or to establish or defend legal claims.
+            </li>
+            <li>
+              <strong className="text-black">Restrict</strong> processing in
+              certain cases, such as while we verify the accuracy of data you
+              have contested.
+            </li>
+            <li>
+              <strong className="text-black">Port</strong> your data, receiving
+              it in a structured, commonly used format or having it transmitted
+              to another organization.
+            </li>
+            <li>
+              <strong className="text-black">Object</strong> to processing
+              based on legitimate interests and to direct marketing at any
+              time.
+            </li>
+            <li>
+              <strong className="text-black">Withdraw consent</strong> at any
+              time, without affecting the lawfulness of processing before
+              withdrawal.
+            </li>
+            <li>
+              Exercise your rights relating to automated decision-making and
+              profiling, where applicable.
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      title: "How to Exercise Your Rights",
+      content: (
+        <p>
+          Email{" "}
+          <a
+            href="mailto:admin@machwares.com"
+            className="font-semibold text-[var(--primary)] transition-opacity hover:opacity-70"
+          >
+            admin@machwares.com
+          </a>
+          . We respond without undue delay and, in principle, within one month
+          of receiving your request. Requests are free of charge. We may ask
+          for additional information to confirm your identity. If a request is
+          manifestly unfounded or excessive, particularly because it is
+          repetitive, we may charge a reasonable fee or decline to act, and we
+          will explain why. If we decline a request, we will tell you the
+          reasons, your right to lodge a complaint with a data protection
+          authority, and your right to seek a judicial remedy. If your request
+          concerns data we process for a client campaign, we will direct it to
+          that client.
+        </p>
+      ),
+    },
+    {
+      title: "Security and Breach Notification",
+      content: (
+        <p>
+          We apply technical and organizational measures appropriate to the
+          risk, such as access controls and encryption where appropriate. If a
+          personal data breach is likely to result in a risk to individuals’
+          rights and freedoms, the controller must notify the competent
+          supervisory authority without undue delay and, where feasible,
+          within 72 hours of becoming aware of it. Where the breach is likely
+          to result in a high risk, affected individuals are also notified
+          without undue delay. When we act as a processor, we notify the client
+          without undue delay after becoming aware of a breach.
+        </p>
+      ),
+    },
+    {
+      title: "International Data Transfers",
+      content: (
+        <>
+          <p>
+            Machwares operates in the United States, so personal data of
+            individuals in the EU and EEA may be transferred to and processed
+            outside the EEA. Where we do so, we rely on a transfer mechanism
+            permitted by Chapter V of the GDPR, such as:
+          </p>
+          <ul className="mt-4 list-disc space-y-3 pl-5">
+            <li>
+              <strong className="text-black">
+                Standard Contractual Clauses:
+              </strong>{" "}
+              Adopted by the European Commission, with supplementary measures
+              where needed.
+            </li>
+            <li>
+              <strong className="text-black">Adequacy decisions:</strong>{" "}
+              Including the EU–U.S. Data Privacy Framework (Commission
+              Implementing Decision (EU) 2023/1795, adopted July 10, 2023), for
+              transfers to U.S. organizations certified under it.
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      title: "Data Protection by Design and by Default",
+      content: (
+        <p>
+          We limit data collection to what is necessary for each purpose and
+          configure our tools and processes with privacy-protective defaults.
+        </p>
+      ),
+    },
+    {
+      title: "Data Protection Officer and EU Representative",
+      content: (
+        <p>
+          The GDPR requires a Data Protection Officer only where an
+          organization’s core activities involve large-scale regular
+          monitoring of individuals or large-scale processing of sensitive
+          data. Privacy inquiries are handled by our privacy contact at{" "}
+          <a
+            href="mailto:admin@machwares.com"
+            className="font-semibold text-[var(--primary)] transition-opacity hover:opacity-70"
+          >
+            admin@machwares.com
+          </a>
+          . EU representative under Article 27, where applicable: [Name and
+          Address of EU Representative].
+        </p>
+      ),
+    },
+    {
+      title: "Complaints",
+      content: (
+        <p>
+          You have the right to lodge a complaint with the supervisory
+          authority in the EU or EEA country where you live, where you work, or
+          where you believe an infringement occurred. A directory of
+          authorities is available on the European Data Protection Board
+          website at{" "}
+          <a
+            href="https://edpb.europa.eu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-[var(--primary)] transition-opacity hover:opacity-70"
+          >
+            edpb.europa.eu
+          </a>
+          . We encourage you to contact us first so we can try to resolve your
+          concern.
+        </p>
+      ),
+    },
+    {
+      title: "Updates to This Page",
+      content: (
+        <p>
+          We review this page periodically and update it as our practices or
+          the law change. The effective date above shows the latest version.
+        </p>
+      ),
+    },
+    {
+      title: "Contact",
+      content: (
+        <>
+          <p>GDPR inquiries? Contact us:</p>
+          <div className="mt-4 space-y-2 rounded-2xl bg-black/[0.03] p-5">
+            <p>
+              <strong className="text-black">Email:</strong>{" "}
+              <a
+                href="mailto:admin@machwares.com"
+                className="font-semibold text-[var(--primary)] transition-opacity hover:opacity-70"
+              >
+                admin@machwares.com
+              </a>
+            </p>
+          </div>
+        </>
+      ),
+    },
+  ];
+
   return (
     <>
-        <SEO
-          title="GDPR Compliance"
-          description="Learn how Go Purple Nut handles personal data and supports GDPR rights for individuals in the EU and UK."
-          path="/gdpr-compliance"
-        />
-        <Navbar forceScrolled />
-        <main className="min-h-screen bg-[#f4f1eb] text-[#17151a]">
+      <SEO
+        title="GDPR Compliance"
+        description="Learn how Machwares handles personal data under the GDPR, including your privacy rights, legal bases for processing, international data transfers, and how to contact us."
+        path="/gdpr-compliance"
+      />
 
+      <Navbar forceScrolled />
+
+      <main className="bg-white text-[var(--dark)]">
         {/* Hero */}
-        <section className="relative overflow-hidden border-b border-black/10">
-            <div className="mx-auto max-w-[1440px] px-6 pb-20 pt-28 sm:px-10 sm:pb-24 sm:pt-32 lg:px-16 lg:pb-28 lg:pt-36">
+        <section className="bg-[#100C1C] px-6 py-24 sm:px-10 sm:py-32 lg:px-16 lg:py-40">
+          <div className="mx-auto max-w-[1440px]">
+            <p className="mb-6 font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.2em] text-[var(--secondary)]">
+              Legal
+            </p>
 
-            {/* Top Meta */}
-            <motion.div
-                initial={{ opacity: 0, y: -15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="mb-16 flex items-center justify-between sm:mb-24"
-            >
-                <Link
-                to="/"
-                className="group inline-flex items-center gap-3 font-[var(--font-body)] text-[10px] font-semibold uppercase tracking-[0.18em] text-black/50 transition-colors hover:text-black sm:text-xs"
-                >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 transition-all duration-300 group-hover:-translate-x-1 group-hover:border-black/25">
-                    <ArrowLeft size={15} strokeWidth={1.5} />
-                </span>
+            <h1 className="max-w-[1100px] font-[var(--font-display)] text-[14vw] font-semibold leading-[0.85] tracking-[-0.07em] text-white sm:text-[11vw] lg:text-[8vw] xl:text-[110px]">
+              GDPR
+              <br />
+              <span className="text-[var(--primary)]">Compliance</span>
+            </h1>
 
-                Back to home
-                </Link>
-
-                <span className="font-[var(--font-body)] text-[10px] uppercase tracking-[0.18em] text-black/35 sm:text-xs">
-                GoPurple
-                </span>
-            </motion.div>
-
-            {/* Hero Content */}
-            <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-20">
-
-                {/* Heading */}
-                <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                    duration: 0.9,
-                    ease: [0.22, 1, 0.36, 1],
-                }}
-                >
-                <div className="mb-6 flex items-center gap-3">
-                    <span className="h-2 w-2 rounded-full bg-[var(--primary)]" />
-
-                    <span className="font-[var(--font-body)] text-[10px] font-semibold uppercase tracking-[0.22em] text-black/45 sm:text-xs">
-                    Data Protection
-                    </span>
-                </div>
-
-                <h1 className="max-w-5xl font-[var(--font-display)] text-[clamp(3.5rem,8.5vw,8rem)] font-semibold leading-[0.8] tracking-[-0.075em]">
-                    GDPR
-                    <br />
-                    <span className="text-[var(--primary)]">
-                    Compliance.
-                    </span>
-                </h1>
-                </motion.div>
-
-                {/* Intro */}
-                <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                    duration: 0.8,
-                    delay: 0.2,
-                    ease: [0.22, 1, 0.36, 1],
-                }}
-                className="max-w-md lg:mb-2"
-                >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border border-black/10">
-                    <LockKeyhole
-                    size={20}
-                    strokeWidth={1.5}
-                    />
-                </div>
-
-                {/* <p className="font-[var(--font-body)] text-base leading-[1.7] text-black/55 sm:text-lg">
-                    A straightforward overview of how we approach personal data,
-                    privacy rights, and GDPR requirements where applicable.
-                </p> */}
-
-                <p className="mt-5 font-[var(--font-body)] text-[10px] uppercase tracking-[0.18em] text-black/35">
-                    Effective date: September 7, 2026
-                </p>
-                </motion.div>
-
-            </div>
-            </div>
+            <p className="mt-10 max-w-[650px] font-[var(--font-body)] text-base leading-7 text-white/65 sm:text-lg sm:leading-8">
+              Learn how Machwares approaches personal data protection and
+              respects the privacy rights of individuals covered by the
+              General Data Protection Regulation.
+            </p>
+          </div>
         </section>
 
         {/* Content */}
-        <section>
-            <div className="mx-auto max-w-[1100px] px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-28">
+        <section className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-32">
+          <div className="mx-auto grid max-w-[1200px] gap-14 lg:grid-cols-[260px_1fr] lg:gap-20">
+            {/* Sidebar */}
+            <aside className="lg:sticky lg:top-28 lg:h-fit">
+              <p className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.18em] text-black/40">
+                GDPR Compliance
+              </p>
 
-            {/* Introduction */}
-            {/* <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.7 }}
-                className="mb-16 max-w-3xl sm:mb-20"
-            >
-                <p className="font-[var(--font-body)] text-base leading-[1.8] text-black/60 sm:text-lg">
-                This page provides information about our approach to data
-                protection and the rights that may be available to individuals
-                under the General Data Protection Regulation.
-                </p>
-            </motion.div> */}
+              <div className="mt-5 h-px w-full bg-black/10" />
 
-            {/* Sections */}
-            <div className="">
-                {sections.map((section, index) => (
-                <motion.article
-                    key={section.title}
-                    initial={{ opacity: 0, y: 25 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.15 }}
-                    transition={{
-                    duration: 0.6,
-                    delay: index * 0.025,
-                    }}
-                    className="grid gap-6 border-b border-black/10 py-10 sm:py-12 lg:grid-cols-[0.35fr_0.65fr] lg:gap-16"
-                >
-                    <h2 className="font-[var(--font-display)] text-2xl font-semibold leading-tight tracking-[-0.04em] sm:text-3xl">
-                    {section.title}
-                    </h2>
+              <p className="mt-5 font-[var(--font-body)] text-sm leading-6 text-black/50">
+                Information about our GDPR responsibilities, data processing
+                practices, and the privacy rights available to individuals.
+              </p>
 
-                    <div className="gdpr-content font-[var(--font-body)] text-sm leading-[1.8] text-black/55 sm:text-base">
-                    {section.content}
-                    </div>
-                </motion.article>
-                ))}
-            </div>
-
-            {/* Bottom Navigation */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-                className="mt-12 flex items-center justify-between pt-6"
-            >
-                <span className="font-[var(--font-body)] text-[10px] uppercase tracking-[0.18em] text-black/30">
-                GoPurple
-                </span>
-
-                <Link
+              <Link
                 to="/privacy-policy"
-                className="group inline-flex items-center gap-2 font-[var(--font-body)] text-[10px] font-semibold uppercase tracking-[0.18em] text-black/45 transition-colors hover:text-black"
-                >
+                className="group mt-7 inline-flex items-center gap-2 font-[var(--font-body)] text-sm font-semibold text-[var(--dark)]"
+              >
                 Privacy Policy
 
-                <ArrowUpRight
+                <span className="flex h-7 w-7 items-center justify-center rounded-full border border-black/10 transition-all duration-300 group-hover:border-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white">
+                  <ArrowUpRight
                     size={14}
                     className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-                </Link>
-            </motion.div>
+                  />
+                </span>
+              </Link>
+            </aside>
 
+            {/* Sections */}
+            <div className="max-w-[800px]">
+              <div className="mb-12 border-b border-black/10 pb-8">
+                <p className="font-[var(--font-body)] text-sm leading-7 text-[var(--text)]">
+                  Effective Date: November 02, 2026
+                </p>
+              </div>
+
+              <div className="space-y-0">
+                {sections.map((section, index) => (
+                  <article
+                    key={section.title}
+                    className="border-b border-black/10 py-9 first:pt-0"
+                  >
+                    <div className="flex gap-5">
+                      <span className="hidden shrink-0 pt-1 font-[var(--font-body)] text-xs font-bold tracking-[0.12em] text-[var(--primary)] sm:block">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      <div className="min-w-0">
+                        <h2 className="font-[var(--font-display)] text-xl font-semibold tracking-[-0.02em] text-black sm:text-2xl">
+                          {section.title}
+                        </h2>
+
+                        <div className="mt-5 font-[var(--font-body)] text-base leading-7 text-[var(--text)]">
+                          {section.content}
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              {/* Bottom CTA */}
+              <div className="mt-16 overflow-hidden rounded-3xl bg-[#100C1C] p-7 sm:p-10">
+                <p className="font-[var(--font-body)] text-xs font-bold uppercase tracking-[0.18em] text-[var(--secondary)]">
+                  GDPR Questions?
+                </p>
+
+                <h2 className="mt-4 max-w-[600px] font-[var(--font-display)] text-3xl font-semibold leading-tight tracking-[-0.04em] text-white sm:text-4xl">
+                  Have a privacy concern?
+                </h2>
+
+                <p className="mt-4 max-w-[550px] font-[var(--font-body)] text-sm leading-6 text-white/60">
+                  If you have questions about how we handle personal data or
+                  wish to exercise your GDPR rights, contact our team.
+                </p>
+
+                <a
+                  href="mailto:admin@machwares.com"
+                  className="group mt-7 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 font-[var(--font-body)] text-sm font-semibold text-[var(--dark)] transition-all duration-300 hover:bg-[var(--primary)] hover:text-white"
+                >
+                  Email our team
+
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/5 transition-colors group-hover:bg-white/10">
+                    <ArrowUpRight
+                      size={14}
+                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
+                  </span>
+                </a>
+              </div>
             </div>
+          </div>
         </section>
+      </main>
 
-        {/* Scoped styles */}
-        <style>{`
-            .gdpr-content p {
-            margin-bottom: 1.25rem;
-            }
-
-            .gdpr-content p:last-child {
-            margin-bottom: 0;
-            }
-
-            .gdpr-content ul {
-            margin: 1.25rem 0;
-            padding-left: 1.25rem;
-            list-style-type: disc;
-            }
-
-            .gdpr-content li {
-            margin-bottom: 0.65rem;
-            padding-left: 0.35rem;
-            }
-        `}</style>
-
-        </main>
-        <Footer />
+      <Footer />
     </>
   );
 };

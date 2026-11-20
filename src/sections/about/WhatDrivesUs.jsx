@@ -11,30 +11,30 @@ const WhatDrivesUs = () => {
     {
       number: "01",
       icon: Users,
-      title: "People First",
+      title: "Accountability over activity",
       description:
-        "We believe meaningful growth begins with understanding people, their needs, interests, and behaviour.",
+        "We track installs, sign-ups, purchases, and revenue, not impressions alone.",
     },
     {
       number: "02",
       icon: Lightbulb,
-      title: "Strategic Thinking",
+      title: "Plain reporting",
       description:
-        "Every campaign starts with a clear direction, thoughtful planning, and an understanding of the bigger picture.",
+        "You see what was spent, what it produced, and what we plan to change next.",
     },
     {
       number: "03",
       icon: TrendingUp,
-      title: "Performance Matters",
+      title: "Fit before scale",
       description:
-        "We focus on meaningful outcomes, using insights and continuous optimization to improve campaign performance.",
+        "We recommend a channel only after confirming it suits your audience, budget, and goals.",
     },
     {
       number: "04",
       icon: Handshake,
-      title: "Stronger Partnerships",
+      title: "Shared data across verticals",
       description:
-        "We value collaboration and believe the right partnerships create opportunities for shared, lasting growth.",
+        "Our four services draw on the same performance data, so the budget can move to the channels that work.",
     },
   ];
 
@@ -45,7 +45,7 @@ const WhatDrivesUs = () => {
         <div className="mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary)]">
-              What Drives Us
+              Our Principles
             </p>
 
             <h2 className="font-[var(--font-display)] text-4xl font-semibold leading-tight tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
@@ -55,8 +55,8 @@ const WhatDrivesUs = () => {
           </div>
 
           <p className="max-w-md text-base leading-8 text-[var(--text)]">
-            Our work is guided by a few simple principles that shape how we
-            think, collaborate, and create opportunities for brands.
+            Our work is guided by accountability, transparent reporting,
+            thoughtful channel selection, and shared performance data.
           </p>
         </div>
 

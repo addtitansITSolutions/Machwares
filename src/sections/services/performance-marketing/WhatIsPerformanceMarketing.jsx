@@ -13,21 +13,21 @@ const features = [
     icon: Target,
     title: "Reach the right audience",
     description:
-      "Connect your brand with audiences whose interests, needs, and behaviours align with what you offer.",
+      "Connect your brand with audiences whose interests, needs, and behaviors align with what you offer.",
   },
   {
     number: "02",
     icon: MousePointerClick,
     title: "Focus on meaningful actions",
     description:
-      "Build campaigns around valuable actions such as clicks, leads, conversions, and customer acquisition.",
+      "Build campaigns around valuable actions such as leads, purchases, and sign-ups, measured from the first click.",
   },
   {
     number: "03",
     icon: ChartNoAxesCombined,
     title: "Optimize for better outcomes",
     description:
-      "Use campaign insights and performance data to understand what works and continuously improve.",
+      "Use campaign data to see what works, then move budget toward the audiences, ads, and channels that perform.",
   },
 ];
 
@@ -47,7 +47,6 @@ const WhatIsPerformanceMarketing = () => {
   return (
     <section className="relative overflow-hidden bg-[var(--secondary)] px-6 py-24 sm:px-10 sm:py-28 lg:px-16 lg:py-32">
       <div className="mx-auto max-w-7xl">
-
         {/* Section Heading */}
         <motion.div
           variants={reveal}
@@ -65,9 +64,7 @@ const WhatIsPerformanceMarketing = () => {
 
             <h2 className="max-w-xl font-[var(--font-display)] text-4xl font-semibold leading-[1.12] tracking-[-0.045em] text-[var(--dark)] sm:text-5xl lg:text-6xl">
               Marketing with a{" "}
-              <span className="text-[var(--primary)]">
-                purpose.
-              </span>
+              <span className="text-[var(--primary)]">purpose.</span>
             </h2>
           </div>
 
@@ -79,9 +76,9 @@ const WhatIsPerformanceMarketing = () => {
             </p>
 
             <p className="mt-4 text-base leading-8 text-[var(--text)] sm:text-lg sm:leading-9">
-              At Machwares, we bring strategy, audience understanding,
-              campaign execution, and ongoing optimization together to
-              make every marketing effort more purposeful.
+              At Machwares, we pair strategy with hands-on campaign management.
+              Every campaign starts with a defined target, runs with conversion
+              tracking in place, and is adjusted as results come in.
             </p>
           </div>
         </motion.div>
@@ -130,24 +127,6 @@ const WhatIsPerformanceMarketing = () => {
             );
           })}
         </div>
-
-        {/* Closing Statement */}
-        <motion.div
-          variants={reveal}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="mt-10 flex flex-col gap-4 rounded-2xl bg-[var(--dark)] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-9"
-        >
-          <p className="max-w-2xl font-[var(--font-display)] text-xl font-medium leading-relaxed text-white sm:text-2xl">
-            Better marketing starts with knowing what you're working towards.
-          </p>
-
-          <span className="shrink-0 text-sm font-semibold text-red-400">
-            Strategy first. Performance always.
-          </span>
-        </motion.div>
-
       </div>
     </section>
   );

@@ -55,9 +55,9 @@ const ServicesHero = () => {
           className="relative z-10"
         >
           <h1 className="max-w-[760px] font-[var(--font-display)] text-[clamp(2.8rem,5.5vw,4.2rem)] font-semibold leading-[1.08] tracking-[-0.055em] text-[var(--dark)]">
-            Marketing built to {" "}
+            Five services {" "}
             <span className="relative inline-block text-[var(--primary)]">
-             create meaningful growth.
+             Built to perform.
             </span>
           </h1>
 
